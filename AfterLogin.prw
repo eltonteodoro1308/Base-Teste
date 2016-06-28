@@ -1,5 +1,4 @@
-//Alteração do Fonte Efetuada direto no GitHub
-#Include 'TOTVS.CH'
+﻿#Include 'TOTVS.CH'
 #Define K_CTRL_D 04
 #Define K_CTRL_P 16
 #Define K_CTRL_R 18
