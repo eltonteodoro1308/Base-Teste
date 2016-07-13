@@ -1,0 +1,11 @@
+<%#Include "Totvs.ch"%>
+<%#include "tbiconn.ch"%>
+
+<html>
+<head>
+<title></title>
+</head>
+<p><%= Time()%></p>
+</body>
+</html>
+
