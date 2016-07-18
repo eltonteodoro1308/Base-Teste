@@ -65,6 +65,20 @@ Static Function Processa()
                      
         aAdd( aEmp, '12' )	             
 	aAdd( aTab, {'CTB'} )
+	
+        aAdd( aEmp, '16' )	             
+	aAdd( aTab, {'SB2','SC7','SCR','SD1','SE2','SE5','SEF','SF1','SF3','SFT','SYA'} )
+	
+	aAdd( aEmp, '19' )	             
+	aAdd( aTab, {'CC5'} )
+	
+	aAdd( aEmp, '25' )	             
+	aAdd( aTab, {'SC7','SC9','SCR','SD1','SD2','SDE','SE1','SE2','SE5','SEF','SEH','SF1','SF2','SF3',;
+	             'SFT','SI3','SLX','SN1','SN3','SN4','SR4','SRL','SY0','SYD','SYQ'} )
+	             
+	aAdd( aEmp, '26' )	             
+	aAdd( aTab, {'SA1','CTB'} )
+
 
 	oProcess:SetRegua1( Len( aEmp ) )
 	
