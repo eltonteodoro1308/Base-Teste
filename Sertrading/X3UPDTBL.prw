@@ -79,6 +79,10 @@ Static Function Processa()
 	aAdd( aEmp, '26' )
 	aAdd( aTab, {'SA1','CTB'} )
 	
+	aAdd( aEmp, '27' )
+	aAdd( aTab, {'SA1','SA2'} )
+	
+	
 	
 	oProcess:SetRegua1( Len( aEmp ) )
 	
