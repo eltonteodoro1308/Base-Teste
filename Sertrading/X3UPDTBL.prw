@@ -62,6 +62,9 @@ Static Function Processa()
                      'SRD','SRL','SRV','ST1','ST6','ST9','TBB','STC','TCD','STG','STJ','STL','TMY','TNN',;
                      'TNQ','TO0','STP','TP1','TP2','TPG','TPP','TQF','STS','TS1','STT','SU5','SUS','WF4',;
                      'WF7','SWN','SYA'} )
+                     
+        aAdd( aEmp, '12' )	             
+	aAdd( aTab, {'CTB'} )
 
 	oProcess:SetRegua1( Len( aEmp ) )
 	
