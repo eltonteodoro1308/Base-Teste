@@ -54,6 +54,15 @@ Static Function Processa()
 	aAdd( aEmp, '10' )
 	aAdd( aTab, {'CC5','CC7','CF2','CF8','CTB','SD3','SE2','SBI'} )
 
+	aAdd( aEmp, '11' )
+	aAdd( aTab, {'SC7','SC8','SC9','SCR','CTB','SD1','SD2','SD3','SD5','SD7','SD8','SDA','SDB','SDE',;
+                     'SDH','SDS','SDT','SE1','SE2','SE3','SE4','SE5','SE6','SE7','SED','SEE','SEF','SEH',;
+                     'SEU','SEZ','SF1','SF2','SF3','SF5','SF6','SF7','SF8','SFB','SFC','SFP','SFT','SFU',;
+                     'SFX','SM2','SN1','SN3','SN4','SNJ','SNM','SNQ','SNR','SNS','SNX','SR4','SRA','SRC',;
+                     'SRD','SRL','SRV','ST1','ST6','ST9','TBB','STC','TCD','STG','STJ','STL','TMY','TNN',;
+                     'TNQ','TO0','STP','TP1','TP2','TPG','TPP','TQF','STS','TS1','STT','SU5','SUS','WF4',;
+                     'WF7','SWN','SYA'} )
+
 	oProcess:SetRegua1( Len( aEmp ) )
 	
 	oProcess:SetRegua2( Len( aTab ) )
