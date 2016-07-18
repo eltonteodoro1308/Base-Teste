@@ -21,13 +21,20 @@ Static Function Processa()
 	Local oFont    := Nil
 	Local oMemo    := Nil
 	
-	aAdd( aEmp, '99' )
-	aAdd( aTab, {'SC1','SC2','SC3','SC4','SC5','SC6','ZZZ'} )
-	
-	aAdd( aEmp, '99' )
-	aAdd( aTab, {'SC1','SC2','SC3','SC4','SC5','SC6','ZZZ'} )
-	
-	
+	aAdd( aEmp, '01' )
+	aAdd( aTab, {'SA6','AD2','AD5','AD7','AD8','ADA','ADB','ADE','ADJ','ADK','ADL','AE1','AF1','AF2',;
+	             'AF3','AF5','AF7','AF8','AF9','AFC','AFG','AFN','AFR','AFS','AFT','AGH','AH9','AI8',;
+	             'AIC','SB2','SB5','SB6','SB7','BA0','BA3','BEA','BG9','BQC','BT5','C07','SC1','SC5',;
+	             'SC6','SC7','SC8','SC9','CC3','CC5','CC6','CC7','CCF','CCX','CD0','D20','CD3','CD4',;
+	             'CD5','CD6','CD7','CD8','CD9','CDA','CDB','CDC','CDD','CDE','CDF','CDG','CDL','CDR',;
+	             'CDS','CDT','CE1','CE5','CF4','CF5','CF6','CF8','CN0','CN1','CN9','CNB','CNC','CND',;
+	             'CNE','CNF','CNG','CNL','CNR','CNX','SCR','CS0','CT2','CT5','CTN','CTS','CV8','CVA',;
+	             'CVD','CVF','CVN','SD1','SD2','SD3','DA3','SDE','DT3','DUL','DY3','SE1','SE2','SE5',;
+	             'SEE','EE5','EE6','EE7','EE8','EE9','EEC','EEM','EEQ','EES','EET','EEU','SEF','EF1',;
+	             'EF3','EF7','SEH','EL0','ELA','SEU','EX9','EXL','EYJ','EYY','SF1','SF2','SF3','FIL',;
+	             'SFT','SI3','SJ5','SLG','SLX','SN1','SN3','SN4','SR4','RCA','SRL','SRV','TZ4','TZ5',;
+	             'WF7','SWN','SY0','SY9','SYB','SYD','SYQ','SYT'} )
+
 	oProcess:SetRegua1( Len( aEmp ) )
 	
 	oProcess:SetRegua2( Len( aTab ) )
@@ -40,7 +47,7 @@ Static Function Processa()
 			
 			RpcSetType(3)
 			
-			AutoGrLog( 'Não foi possível conectar na empresa ' + aEmp[ nX ] )
+			AutoGrLog( 'NÃ£o foi possÃ­vel conectar na empresa ' + aEmp[ nX ] )
 			
 		Else
 			
@@ -54,7 +61,7 @@ Static Function Processa()
 				
 				If __GetX31Error()
 					
-					AutoGrLog( 'Erro na atualização da Tabela ' + aTab[ nX, nY ] )
+					AutoGrLog( 'Erro na atualizaÃ§Ã£o da Tabela ' + aTab[ nX, nY ] )
 					
 				Else
 					
@@ -78,7 +85,7 @@ Static Function Processa()
 	
 	Define Font oFont Name "Mono AS" Size 5, 12
 	
-	Define MsDialog oDlg Title "Atualização concluida." From 3, 0 to 340, 417 Pixel
+	Define MsDialog oDlg Title "AtualizaÃ§Ã£o concluida." From 3, 0 to 340, 417 Pixel
 	
 	@ 5, 5 Get oMemo Var cLog Memo Size 200, 145 Of oDlg Pixel
 	oMemo:bRClicked := { || AllwaysTrue() }
