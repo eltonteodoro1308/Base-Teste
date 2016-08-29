@@ -229,12 +229,12 @@ If (oXml <> Nil)
 		ConOut("***********************************************************")
 		
 		aAdd(aDadCnt,{"E1_CCC"		,oXml:_DADOSCONTABEIS:_E1_CCC:TEXT			,Nil}) 	//Centro de Custo Credito
-		aAdd(aDadCnt,{"E1_ITEMC"	,oXml:_DADOSCONTABEIS:_E1_ITEMC:TEXT		,Nil}) 	//Item Credito
+		aAdd(aDadCnt,{"E1_ITEMC"		,oXml:_DADOSCONTABEIS:_E1_ITEMC:TEXT		,Nil}) 	//Item Credito
 		aAdd(aDadCnt,{"E1_CLVLCR"	,oXml:_DADOSCONTABEIS:_E1_CLVLCR:TEXT		,Nil})		//Classe de Valor Credito
 		aAdd(aDadCnt,{"E1_CREDIT"	,oXml:_DADOSCONTABEIS:_E1_CREDIT:TEXT		,Nil}) 	//Contra Credito
 		aAdd(aDadCnt,{"E1_DEBITO"	,oXml:_DADOSCONTABEIS:_E1_DEBITO:TEXT		,Nil}) 	//Classe de Valor Credito
-		aAdd(aDadCnt,{"E1_NCCZ4"	,oXml:_DADOSCONTABEIS:_E1_NCCZ4:TEXT		,Nil}) 	//Número do Cartão de Crédito 
-		aAdd(aDadCnt,{"E1_TITZ4"	,oXml:_DADOSCONTABEIS:_E1_TITZ4:TEXT		,Nil})		//Nome do Titular do Cartão 		
+		aAdd(aDadCnt,{"E1_NCCZ4"		,oXml:_DADOSCONTABEIS:_E1_NCCZ4:TEXT		,Nil}) 	//Número do Cartão de Crédito 
+		aAdd(aDadCnt,{"E1_TITZ4"		,oXml:_DADOSCONTABEIS:_E1_TITZ4:TEXT		,Nil})		//Nome do Titular do Cartão 		
 	Else	
 		//Retorno do WS
 		cErrWs := AllTrim(oXml:_DADOSCONTABEIS:_MENSAGEM:TEXT)
@@ -305,7 +305,7 @@ BeginTran()
 		FERASE(NomeAutoLog())	
 	Else
 	
-		//Atualiza o flag do registro, somente se todos os campos estiverem preenchidos 
+		//Atualiza o flag do registro, somente se todos os campos estiverem preenchidos - Fábio Consentino 19/09/14 
 		If !Empty(SE1->E1_CCC) .And. !Empty(SE1->E1_ITEMC) .And. !Empty(SE1->E1_CLVLCR) .And. !Empty(SE1->E1_CREDIT) .And. !Empty(SE1->E1_DEBITO)
 			SE1->(RecLock("SE1",.F.))
 			SE1->E1_ZATINT := "1"
@@ -387,7 +387,7 @@ Return(lRet)
 Funcao para validar os campos que serão alterados
         
 @author 		Fábio Consentino
-@since 			24/07/2014
+@since 			19/09/2014
 @version 		P11
 @param			aDadCnt 	- Dados contabeis
 @param			nIdLan		- ID do lancamento na tabela de integracao
@@ -400,7 +400,7 @@ Data       Programador     Motivo
 //---------------------------------------------------------------------------------------------------------------------------------------
 Static Function FValCpos(aDadCnt,nIdLan)
 
-Local aAreas 	:= {GetArea()}
+Local aAreas 	:= {GetArea(),CTT->(GetArea()),CT1->(GetArea()),CTH->(GetArea()),CTD->(GetArea())}
 Local lRetFun	:= .T.
 Local cTabVal	:= ""
 Local cCpoInv	:= ""

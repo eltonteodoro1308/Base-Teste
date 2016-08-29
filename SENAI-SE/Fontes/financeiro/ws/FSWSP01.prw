@@ -149,8 +149,6 @@ If (lVld)
 	cEmpTit := StrZero(Val(cEmpTit),2)
 	cFilTit := StrZero(Val(cFilTit),2)
 	
-	ConOut("FSWP01TESTE3: Empresa: "+	cEmpTit + " Filial: "+cFilTit)
-	
 	RpcSetType(3)
 	RpcSetEnv(cEmpTit, cFilTit)
 
@@ -207,30 +205,16 @@ If !Empty(cEmpCnt) .And. !Empty(cFilCnt) .And. !Empty(AllTrim(cContrato))
      
 	cEmpCnt := StrZero(Val(cEmpCnt),2)
 	cFilCnt := StrZero(Val(cFilCnt),2)
-    
-	ConOut("FSWP01TESTE1: Empresa: "+cEmpCnt+" Filial: "+cFilCnt)
 
-	RpcSetType(3) 
-	
-	ConOut("FSWP01TESTE2: Empresa: "+cEmpCnt+" Filial: "+cFilCnt)
-	
+	RpcSetType(3)
 	RpcSetEnv(cEmpCnt, cFilCnt)
-    
-    ConOut("FSWP01TESTE3: Empresa: "+cEmpCnt+" Filial: "+cFilCnt)
     
 	aAreas 	:= {SE1->(GetArea()), GetArea()}
 	
-	ConOut("FSWP01TESTE4: Empresa: "+cEmpCnt+" Filial: "+cFilCnt)
-	
 	//Verifica se o titulo esta incluido
-	SE1->(dbOrderNickName("FSIND001E1")) 
+	SE1->(dbOrderNickName("FSIND001E1"))
+	If (SE1->(dbSeek(cFilCnt+PadR(cContrato,TamSx3("E1_ZNUMCT")[1]))))
 	
-	ConOut("FSWP01TESTE5: Empresa: "+cEmpCnt+" Filial: "+cFilCnt + "Contrato: " + cContrato)
-	
-	If SE1->(MsSeek(cFilCnt+cContrato))
-	     
-		ConOut("FSWP01TESTE6: Empresa: "+cEmpCnt+" Filial: "+cFilCnt)
-		
 		//Parcela nao podera ser excluida no RM
 		::LOCATIT:LTITGRV := .T.
 	
