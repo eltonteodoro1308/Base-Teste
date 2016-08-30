@@ -324,9 +324,9 @@ Static Function FGerTit(cMsg,cEmpTit,cFilTit,cParcela,cCliente,dDtVenc,nValor,nV
 
 Local lVldAut 	:= .F.
 Local aTitSe1	:= {}	
-Local cPrefixo	:= SuperGetMv("FS_PRXCR",.F.,"RM")
-Local cTipo		:= SuperGetMv("FS_TIPCR",.F.,"BOL")
-Local cNaturez	:= SuperGetMv("FS_NATCR",.F.,"999999999")
+Local cPrefixo	:= GetMv("FS_PRXCR")
+Local cTipo		:= GetMv("FS_TIPCR")
+Local cNaturez	:= GetMv("FS_NATCR")
 Local nOpc		:= 3
 Local cAuxFil	:= cFilAnt
 Local aAreas 	:= {GetArea()}
@@ -337,7 +337,7 @@ Private lMsErroAuto := .F.
 //Adiciona os titulos
 aAdd(aTitSe1,{"E1_FILIAL"	,xFilial("SE1")					,Nil})
 aAdd(aTitSe1,{"E1_PREFIXO"	,cPrefixo							,Nil})
-aAdd(aTitSe1,{"E1_NUM"		,GETSXENUM("SE1","E1_NUM")		,Nil})
+aAdd(aTitSe1,{"E1_NUM"		,GETSX8NUM("SE1","E1_NUM")		,Nil})
 aAdd(aTitSe1,{"E1_TIPO"		,cTipo								,Nil}) 
 aAdd(aTitSe1,{"E1_PARCELA"	,cParcela							,Nil}) 
 aAdd(aTitSe1,{"E1_NATUREZ"	,cNaturez							,Nil}) 
