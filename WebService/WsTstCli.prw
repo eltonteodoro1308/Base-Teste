@@ -2,14 +2,14 @@
 #INCLUDE "APWEBSRV.CH"
 
 /* ===============================================================================
-WSDL Location    http://spon4944:7111/ws/WSMATH.apw?WSDL
-Gerado em        03/21/16 19:05:55
+WSDL Location    http://spon4944:7112/ws/WSMATH.apw?WSDL
+Gerado em        09/20/16 11:22:08
 Observações      Código-Fonte gerado por ADVPL WSDL Client 1.120703
                  Alterações neste arquivo podem causar funcionamento incorreto
                  e serão perdidas caso o código-fonte seja gerado novamente.
 =============================================================================== */
 
-User Function _ZUVULSI ; Return  // "dummy" function - Internal Use 
+User Function _VXLKLOS ; Return  // "dummy" function - Internal Use 
 
 /* -------------------------------------------------------------------------------
 WSDL Service WSWSMATH
@@ -35,7 +35,7 @@ ENDWSCLIENT
 WSMETHOD NEW WSCLIENT WSWSMATH
 ::Init()
 If !FindFunction("XMLCHILDEX")
-	UserException("O Código-Fonte Client atual requer os executáveis do Protheus Build [7.00.131227A-20151103] ou superior. Atualize o Protheus ou gere o Código-Fonte novamente utilizando o Build atual.")
+	UserException("O Código-Fonte Client atual requer os executáveis do Protheus Build [7.00.131227A-20160707 NG] ou superior. Atualize o Protheus ou gere o Código-Fonte novamente utilizando o Build atual.")
 EndIf
 Return Self
 
@@ -65,15 +65,15 @@ Local cSoap := "" , oXmlRet
 
 BEGIN WSMETHOD
 
-cSoap += '<DIVISAO xmlns="http://spon4944:7111/">'
+cSoap += '<DIVISAO xmlns="http://spon4944:7112/">'
 cSoap += WSSoapValue("NDIVIDENDO", ::nNDIVIDENDO, nNDIVIDENDO , "integer", .T. , .F., 0 , NIL, .F.) 
 cSoap += WSSoapValue("NDIVISOR", ::nNDIVISOR, nNDIVISOR , "integer", .T. , .F., 0 , NIL, .F.) 
 cSoap += "</DIVISAO>"
 
 oXmlRet := SvcSoapCall(	Self,cSoap,; 
-	"http://spon4944:7111/DIVISAO",; 
-	"DOCUMENT","http://spon4944:7111/",,"1.031217",; 
-	"http://spon4944:7111/ws/WSMATH.apw")
+	"http://spon4944:7112/DIVISAO",; 
+	"DOCUMENT","http://spon4944:7112/",,"1.031217",; 
+	"http://spon4944:7112/ws/WSMATH.apw")
 
 ::Init()
 ::oWSDIVISAORESULT:SoapRecv( WSAdvValue( oXmlRet,"_DIVISAORESPONSE:_DIVISAORESULT","RESULTDIV",NIL,NIL,NIL,NIL,NIL,NIL) )
