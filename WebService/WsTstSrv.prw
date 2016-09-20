@@ -31,7 +31,7 @@ WSMETHOD DIVISAO WSRECEIVE nDividendo,nDivisor WSSEND oResultDiv WSSERVICE WSMAT
 		
 	End If
 	
-	::oResultDiv::nQuociente := Int( ::nDividendo / ::nDivisor )
-	::oResultDiv::nResto     := Mod( ::nDividendo, ::nDivisor )
+	::oResultDiv:nQuociente := Int( ::nDividendo / ::nDivisor )
+	::oResultDiv:nResto     := Mod( ::nDividendo, ::nDivisor )
 	
 RETURN .T.
