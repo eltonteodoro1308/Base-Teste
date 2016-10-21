@@ -15,6 +15,6 @@ User Function AfterLogin()
 	//SetKey( K_CTRL_V,  {|| U_DrpTbl()   } )
 	//SetKey( K_CTRL_I,  {|| U_totvsprt()  } )
 
-	SetKey( K_CTRL_E,  {|| U_LoadSB1()  } )
+	SetKey( K_CTRL_E,  {|| U_SGPEC001()  } )
 
 Return
