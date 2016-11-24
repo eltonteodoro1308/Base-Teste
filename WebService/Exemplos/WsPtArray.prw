@@ -32,7 +32,7 @@ WSMETHOD PTARRAY WSRECEIVE oMsgRec WSSEND oMsgReq WSSERVICE WSPTARRAY
 	
 	Local nX := 0
 	
-	::oMsgReq := WSClassNew( "MSGARRAYREQ" )
+	//::oMsgReq := WSClassNew( "MSGARRAYREQ" )
 	
 	::oMsgReq:aImprime := {}
 	

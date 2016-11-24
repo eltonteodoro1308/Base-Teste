@@ -2,31 +2,31 @@
 #INCLUDE 'APWEBSRV.CH'
 
 WSSTRUCT MENSAGENSREC
-	
+
 	WSDATA cMensagem1 AS STRING
 	WSDATA cMensagem2 AS STRING
-	
+
 ENDWSSTRUCT
 
 WSSTRUCT MENSAGENSREQ
-	
+
 	WSDATA cImprime1 AS STRING
 	WSDATA cimprime2 AS STRING
-	
+
 ENDWSSTRUCT
 
 WSSERVICE WSPTSTRUCT DESCRIPTION 'Imprime duas Mensagens'
-	
+
 	WSDATA oMsgRec AS MENSAGENSREC
 	WSDATA oMsgReq AS MENSAGENSREQ
-	
+
 	WSMETHOD PTSTRUCT DESCRIPTION 'Retorna as duas mensagens informadas'
-	
+
 ENDWSSERVICE
 
 WSMETHOD PTSTRUCT WSRECEIVE oMsgRec WSSEND oMsgReq WSSERVICE WSPTSTRUCT
-	
-	::oMsgReq:cImprime1 := ::oMsgRec:cMensagem1
-	::oMsgReq:cImprime2 := ::oMsgRec:cMensagem2
-	
+
+	::oMsgReq:cImprime1 := "Digitado: " + ::oMsgRec:cMensagem1
+	::oMsgReq:cImprime2 := "Digitado: " + ::oMsgRec:cMensagem2
+
 RETURN .T.
