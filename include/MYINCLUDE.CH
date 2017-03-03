@@ -1,0 +1,10 @@
+#XCOMMAND MYEXECUTA 1 [<cStr>] => Executa1(<cStr>)
+#XCOMMAND MYEXECUTA 2 [<cStr1>,<cStr2>] => Executa2(<cStr1>,<cStr2>)
+#XCOMMAND MYEXECUTA 3 [<cDesc: NOME, IDADE, ENDERECO>] => Executa3(<(cDesc)>)
+#XCOMMAND MYEXECUTA 4 [<lOptional: OPTIONAL>] => Executa4(<.lOptional.>)
+#XCOMMAND MYEXECUTA 5 <aArr,...> => Executa5({<aArr>})
+#XCOMMAND MYEXECUTA 6 <bBlk> => Executa6(<{ bBlk}>)
+#XCOMMAND MYEXECUTA 7 [<cStr>] => Executa7([<cStr>])
+#XCOMMAND MYEXECUTA 8 <aArr,...> => Executa8({<(aArr)>})
+#XCOMMAND MYEXECUTA 9 [<cStr>] => Executa9(<(cStr)>)
+#XCOMMAND @MODEL 
