@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="Matricula" id="9">
+            <text-property name="helpText">Matricula</text-property>
+            <text-property name="promptText">Matricula</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile" name="P12" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.oda.profile.db.provider.id</name>
+                    <value>org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.savePWD</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.drivers.defnType</name>
+                    <value>org.eclipse.datatools.enablement.msft.sqlserver.2008.driverTemplate</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.driverDefinitionID</name>
+                    <value>DriverDefn.org.eclipse.datatools.enablement.msft.sqlserver.2008.driverTemplate.Microsoft SQL Server 2008 JDBC Driver</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.version</name>
+                    <value>2008</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.vendor</name>
+                    <value>SQL Server</value>
+                </ex-property>
+            </list-property>
+            <property name="databaseName">P12</property>
+            <property name="username">sa</property>
+            <encrypted-property name="password" encryptionID="base64">c2E=</encrypted-property>
+            <property name="URL">jdbc:sqlserver://localhost:1433;databaseName=P12</property>
+            <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="jarList">C:\Users\elton.alves\Documents\Google Drive\Apps\sqljdbc_4.0\ptb\sqljdbc4.jar</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="SRA" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">RA_FILIAL</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RA_FILIAL</text-property>
+                    <text-property name="heading">RA_FILIAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RA_MAT</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RA_MAT</text-property>
+                    <text-property name="heading">RA_MAT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RA_NOMECMP</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RA_NOMECMP</text-property>
+                    <text-property name="heading">RA_NOMECMP</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">RA_FILIAL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">RA_MAT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">RA_NOMECMP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">P12</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">RA_FILIAL</property>
+                    <property name="nativeName">RA_FILIAL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">RA_MAT</property>
+                    <property name="nativeName">RA_MAT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">RA_NOMECMP</property>
+                    <property name="nativeName">RA_NOMECMP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT RA_FILIAL, RA_MAT, RA_NOMECMP
+  FROM SRA990
+  WHERE D_E_L_E_T_ = ' '
+]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="SRA" version="1.0">&#13;
+&lt;SQLStatement>SELECT RA_FILIAL, RA_MAT, RA_NOMECMP&amp;#x0A;  FROM SRA990&amp;#x0A;  WHERE D_E_L_E_T_ = &amp;apos; &amp;apos;&amp;#x0A;&lt;/SQLStatement>&#13;
+&lt;connInfo>SQL Server_2008:Transient.org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile:P12:sa&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="540" version="1.0" width="1122">&#13;
+&lt;control height="96" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1095"/>&#13;
+&lt;control height="181" isHideable="true" isVisible="true" name="DesignViewer" width="1108"/>&#13;
+&lt;control height="225" isHideable="true" isVisible="true" name="GraphControl" width="1100"/>&#13;
+&lt;control height="229" isHideable="true" isVisible="false" name="OutlineViewer" width="137"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RA_FILIAL</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RA_FILIAL</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RA_FILIAL</design:label>
+            <design:formattingHints>
+              <design:displaySize>2</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RA_MAT</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>6</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RA_MAT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RA_MAT</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RA_NOMECMP</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>70</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RA_NOMECMP</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RA_NOMECMP</design:label>
+            <design:formattingHints>
+              <design:displaySize>70</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>parameterMetaData</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="10">
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">SRA</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">RA_FILIAL</property>
+                    <text-property name="displayName">RA_FILIAL</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RA_FILIAL"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RA_MAT</property>
+                    <text-property name="displayName">RA_MAT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RA_MAT"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RA_NOMECMP</property>
+                    <text-property name="displayName">RA_NOMECMP</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RA_NOMECMP"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="29">
+                <property name="width">1.0729166666666667in</property>
+            </column>
+            <column id="30">
+                <property name="width">1.21875in</property>
+            </column>
+            <column id="31">
+                <property name="width">5.65625in</property>
+            </column>
+            <header>
+                <row id="11">
+                    <cell id="12">
+                        <label id="13">
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomStyle">double</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftStyle">double</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightStyle">double</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopStyle">double</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">RA_FILIAL</text-property>
+                        </label>
+                    </cell>
+                    <cell id="14">
+                        <label id="15">
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomStyle">double</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftStyle">double</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightStyle">double</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopStyle">double</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">RA_MAT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="16">
+                        <label id="17">
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomStyle">double</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftStyle">double</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightStyle">double</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopStyle">double</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">RA_NOMECMP</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="18">
+                    <cell id="19">
+                        <data id="20">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="resultSetColumn">RA_FILIAL</property>
+                        </data>
+                    </cell>
+                    <cell id="21">
+                        <data id="22">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="resultSetColumn">RA_MAT</property>
+                        </data>
+                    </cell>
+                    <cell id="23">
+                        <data id="24">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="resultSetColumn">RA_NOMECMP</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="25">
+                    <cell id="26"/>
+                    <cell id="27"/>
+                    <cell id="28"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
