@@ -1,0 +1,22 @@
+<!-- chamada no browse http://spon4944:7112/h_html.apl -->
+
+<html><head><title>ADVPL ASP Demo</title></head>
+
+	<body>
+		<p>Bem vindo ao mundo do ADVPL ASP!</p>
+		<%
+			// Soma os 100 primeiros números
+			
+			i     := 1
+			nSoma := 0
+			
+			For i := 1 To 3
+			
+			   NSoma += i
+			
+			Next i 
+		%>
+		<%= NSoma %>
+	</body>
+
+</html>

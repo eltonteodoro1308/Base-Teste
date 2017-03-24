@@ -1,3 +1,5 @@
+<!-- chamada no browse http://spon4944:7112/h_sb1.apl -->
+
 <%#Include "Totvs.ch"%>
 <%#include "tbiconn.ch"%>
 
