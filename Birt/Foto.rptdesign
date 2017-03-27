@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">8</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile" name="P12" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.oda.profile.db.provider.id</name>
+                    <value>org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.savePWD</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.drivers.defnType</name>
+                    <value>org.eclipse.datatools.enablement.msft.sqlserver.2008.driverTemplate</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.driverDefinitionID</name>
+                    <value>DriverDefn.org.eclipse.datatools.enablement.msft.sqlserver.2008.driverTemplate.Microsoft SQL Server 2008 JDBC Driver</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.version</name>
+                    <value>2008</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.vendor</name>
+                    <value>SQL Server</value>
+                </ex-property>
+            </list-property>
+            <property name="databaseName">P12</property>
+            <property name="username">sa</property>
+            <encrypted-property name="password" encryptionID="base64">c2E=</encrypted-property>
+            <property name="URL">jdbc:sqlserver://localhost:1433;databaseName=P12</property>
+            <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="jarList">C:\Users\elton.alves\Documents\Google Drive\Apps\sqljdbc_4.0\ptb\sqljdbc4.jar</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="PROTHEUS_REPOSIT" id="8">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">BMPNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BMPNAME</text-property>
+                    <text-property name="heading">BMPNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ALIAS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ALIAS</text-property>
+                    <text-property name="heading">ALIAS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SEQ</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SEQ</text-property>
+                    <text-property name="heading">SEQ</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BMPSIZE</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">BMPSIZE</text-property>
+                    <text-property name="heading">BMPSIZE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MODULO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MODULO</text-property>
+                    <text-property name="heading">MODULO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MEMO</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">MEMO</text-property>
+                    <text-property name="heading">MEMO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">D_E_L_E_T_</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">D_E_L_E_T_</text-property>
+                    <text-property name="heading">D_E_L_E_T_</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">R_E_C_N_O_</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">R_E_C_N_O_</text-property>
+                    <text-property name="heading">R_E_C_N_O_</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">BMPNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ALIAS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">SEQ</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">BMPSIZE</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">MODULO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">MEMO</property>
+                        <property name="dataType">blob</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">D_E_L_E_T_</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">R_E_C_N_O_</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">P12</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">BMPNAME</property>
+                    <property name="nativeName">BMPNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ALIAS</property>
+                    <property name="nativeName">ALIAS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">SEQ</property>
+                    <property name="nativeName">SEQ</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">BMPSIZE</property>
+                    <property name="nativeName">BMPSIZE</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">MODULO</property>
+                    <property name="nativeName">MODULO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">MEMO</property>
+                    <property name="nativeName">MEMO</property>
+                    <property name="dataType">blob</property>
+                    <property name="nativeDataType">-4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">D_E_L_E_T_</property>
+                    <property name="nativeName">D_E_L_E_T_</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">R_E_C_N_O_</property>
+                    <property name="nativeName">R_E_C_N_O_</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT *
+  FROM "dbo".PROTHEUS_REPOSIT
+  WHERE BMPNAME = 'USUARIOSEMFOTO_200  '
+]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="PROTHEUS_REPOSIT" version="1.0">&#13;
+&lt;SQLStatement>SELECT *&amp;#x0A;  FROM &amp;quot;dbo&amp;quot;.PROTHEUS_REPOSIT&amp;#x0A;  WHERE BMPNAME = &amp;apos;USUARIOSEMFOTO_200  &amp;apos;&amp;#x0A;&lt;/SQLStatement>&#13;
+&lt;connInfo>SQL Server_2008:Transient.org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile:P12:sa&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="540" version="1.0" width="1122">&#13;
+&lt;control height="162" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1095"/>&#13;
+&lt;control height="178" isHideable="true" isVisible="true" name="DesignViewer" width="1108"/>&#13;
+&lt;control height="162" isHideable="true" isVisible="true" name="GraphControl" width="1100"/>&#13;
+&lt;control height="166" isHideable="true" isVisible="false" name="OutlineViewer" width="136"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BMPNAME</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BMPNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BMPNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ALIAS</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ALIAS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ALIAS</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SEQ</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SEQ</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SEQ</design:label>
+            <design:formattingHints>
+              <design:displaySize>2</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BMPSIZE</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BMPSIZE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BMPSIZE</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MODULO</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>4</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MODULO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MODULO</design:label>
+            <design:formattingHints>
+              <design:displaySize>4</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MEMO</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-4</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MEMO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MEMO</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>D_E_L_E_T_</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>D_E_L_E_T_</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>D_E_L_E_T_</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>R_E_C_N_O_</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>R_E_C_N_O_</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>R_E_C_N_O_</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <image id="9">
+            <property name="dataSet">PROTHEUS_REPOSIT</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">BMPNAME</property>
+                    <expression name="expression" type="javascript">dataSetRow["BMPNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ALIAS</property>
+                    <expression name="expression" type="javascript">dataSetRow["ALIAS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SEQ</property>
+                    <expression name="expression" type="javascript">dataSetRow["SEQ"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">BMPSIZE</property>
+                    <expression name="expression" type="javascript">dataSetRow["BMPSIZE"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">MODULO</property>
+                    <expression name="expression" type="javascript">dataSetRow["MODULO"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MEMO</property>
+                    <expression name="expression" type="javascript">dataSetRow["MEMO"]</expression>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="name">D_E_L_E_T_</property>
+                    <expression name="expression" type="javascript">dataSetRow["D_E_L_E_T_"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">R_E_C_N_O_</property>
+                    <expression name="expression" type="javascript">dataSetRow["R_E_C_N_O_"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="source">expr</property>
+            <expression name="valueExpr">row["MEMO"]</expression>
+        </image>
+    </body>
+</report>
