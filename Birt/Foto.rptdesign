@@ -9,6 +9,7 @@
     </list-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <data-sources>
@@ -37,6 +38,9 @@
                 <ex-property>
                     <name>org.eclipse.datatools.connectivity.db.vendor</name>
                     <value>SQL Server</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.connectionProperties</name>
                 </ex-property>
             </list-property>
             <property name="databaseName">P12</property>
@@ -443,6 +447,7 @@
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
             <page-footer>
                 <text id="3">
                     <property name="contentType">html</property>
@@ -452,52 +457,101 @@
         </simple-master-page>
     </page-setup>
     <body>
-        <image id="9">
-            <property name="dataSet">PROTHEUS_REPOSIT</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">BMPNAME</property>
-                    <expression name="expression" type="javascript">dataSetRow["BMPNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">ALIAS</property>
-                    <expression name="expression" type="javascript">dataSetRow["ALIAS"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">SEQ</property>
-                    <expression name="expression" type="javascript">dataSetRow["SEQ"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">BMPSIZE</property>
-                    <expression name="expression" type="javascript">dataSetRow["BMPSIZE"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-                <structure>
-                    <property name="name">MODULO</property>
-                    <expression name="expression" type="javascript">dataSetRow["MODULO"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">MEMO</property>
-                    <expression name="expression" type="javascript">dataSetRow["MEMO"]</expression>
-                    <property name="dataType">blob</property>
-                </structure>
-                <structure>
-                    <property name="name">D_E_L_E_T_</property>
-                    <expression name="expression" type="javascript">dataSetRow["D_E_L_E_T_"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">R_E_C_N_O_</property>
-                    <expression name="expression" type="javascript">dataSetRow["R_E_C_N_O_"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-            </list-property>
-            <property name="source">expr</property>
-            <expression name="valueExpr">row["MEMO"]</expression>
-        </image>
+        <grid id="14">
+            <property name="width">7.947916666666667in</property>
+            <column id="15">
+                <property name="width">2.65625in</property>
+            </column>
+            <column id="16">
+                <property name="width">2.3229166666666665in</property>
+            </column>
+            <row id="18">
+                <cell id="19">
+                    <image id="9">
+                        <property name="dataSet">PROTHEUS_REPOSIT</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">BMPNAME</property>
+                                <expression name="expression" type="javascript">dataSetRow["BMPNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ALIAS</property>
+                                <expression name="expression" type="javascript">dataSetRow["ALIAS"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">SEQ</property>
+                                <expression name="expression" type="javascript">dataSetRow["SEQ"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">BMPSIZE</property>
+                                <expression name="expression" type="javascript">dataSetRow["BMPSIZE"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">MODULO</property>
+                                <expression name="expression" type="javascript">dataSetRow["MODULO"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">MEMO</property>
+                                <expression name="expression" type="javascript">dataSetRow["MEMO"]</expression>
+                                <property name="dataType">blob</property>
+                            </structure>
+                            <structure>
+                                <property name="name">D_E_L_E_T_</property>
+                                <expression name="expression" type="javascript">dataSetRow["D_E_L_E_T_"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">R_E_C_N_O_</property>
+                                <expression name="expression" type="javascript">dataSetRow["R_E_C_N_O_"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </list-property>
+                        <property name="source">expr</property>
+                        <expression name="valueExpr">row["MEMO"]</expression>
+                    </image>
+                </cell>
+                <cell id="20">
+                    <data id="13">
+                        <property name="textAlign">center</property>
+                        <list-property name="highlightRules">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="backgroundColor">#008000</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#FFFFFF</property>
+                                <expression name="testExpr" type="javascript">row["Column Binding"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">0</value>
+                                </simple-property-list>
+                            </structure>
+                            <structure>
+                                <property name="operator">ne</property>
+                                <property name="backgroundColor">#FF0000</property>
+                                <property name="color">#FFFFFF</property>
+                                <expression name="testExpr" type="javascript">row["Column Binding"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">0</value>
+                                </simple-property-list>
+                            </structure>
+                        </list-property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Column Binding</property>
+                                <text-property name="displayName">Numero_Par</text-property>
+                                <expression name="expression" type="javascript">BirtMath.round( Math.random() * 1000 ) % 2</expression>
+                                <property name="dataType">decimal</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Column Binding</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
     </body>
 </report>
