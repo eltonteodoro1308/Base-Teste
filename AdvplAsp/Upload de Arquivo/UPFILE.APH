@@ -1,0 +1,36 @@
+<!--O código abaixo representa o arquivo "upload.APH", 
+que contém um formulário para exibir alguns dados do aquivo enviado.
+A parte mais importante desse código, se refere a propriedade (enctype="multipart/form-data") 
+dentro da tag , essa propriedade garante que o arquivo seja enviado corretamente.-->
+
+<html>
+<head>
+<title>Exemplo Upload</title>
+
+<script>
+function jUpFile(){	
+
+if( document.form.txtFile.value == "" )	{
+		alert( "Informe o nome do arquivo clicando em Browse..." );		
+		return;	}	
+		
+		document.form.action = "u_upFile.apw";	
+		document.form.submit();}
+		
+		</script>
+		
+		</head>
+		
+		<body>
+		
+		<form name="form" action="" enctype="multipart/form-data" method="post"> 
+		<p align="center">    <font face="Arial, Helvetica, sans-serif" size="3">
+		<b>Exemplo de upload de arquivos em ADVPL ASP</b>
+		</font><br>    <br>    
+		<input name="txtFile" type="file" id="txtFile" size="50">    <br>    <br>    
+		<input name="btnSub" type="button" id="btnSub" value="Subir arquivo" onClick="jUpFile()">  </p>
+		</form>
+		</body>
+		</html>
+		
+		

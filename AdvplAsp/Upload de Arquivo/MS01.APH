@@ -1,0 +1,33 @@
+<!--O código abaixo representa o arquivo "ms01.APH",
+que contém um formulário para indicar o local do aquivo para upload.-->
+
+<html>
+	<head>
+		<title>Exemplo Upload</title>
+	</head>
+	<body>
+		<table width="500"  border="1" align="center" cellpadding="0" cellspacing="0">  
+			<tr>    
+				<td width="28%" align="right">Path do arquivo  : </td>    
+				<td width="2%"> </td>    
+				<td width="70%">
+					<%=httpPost->txtFile%></td>  
+				</tr>
+				<tr>    
+					<td align="right">Tamanho : </td>
+					<td> </td>    
+					<td>
+						<%=LengthFile%>
+					</td>  
+				</tr>
+								<tr>    
+					<td align="right">Conteudo : </td>
+					<td> </td>    
+					<td>
+						<%=MemoRead( httpPost->txtFile )%>
+					</td>  
+				</tr>
+		</table>
+	</body>
+</html>
+		
