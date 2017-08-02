@@ -6,8 +6,8 @@
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <data-sources>
-        <oda-data-source extensionID="com.totvs.tds.birt.oda.protheus" name="RPC" id="7">
-            <property name="com_totvs_tds_birt_connection_service">com.totvs.tds.birt.connection.rpc</property>
+        <oda-data-source extensionID="com.totvs.tds.birt.oda.protheus" name="RPC" id="31">
+            <property name="com_totvs_tds_birt_connection_service">br.com.totvs.tds.birt.connection.rpc</property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -201,8 +201,7 @@
         </simple-master-page>
     </page-setup>
     <body>
-        <table id="9">
-            <property name="width">7.947916666666667in</property>
+        <table id="54">
             <property name="dataSet">SQL</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -224,112 +223,52 @@
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
-            <column id="28">
-                <property name="width">1.0729166666666667in</property>
-            </column>
-            <column id="29">
-                <property name="width">0.8020833333333334in</property>
-            </column>
-            <column id="30">
-                <property name="width">6.072916666666667in</property>
-            </column>
+            <column id="73"/>
+            <column id="74"/>
+            <column id="75"/>
             <header>
-                <row id="10">
-                    <cell id="11">
-                        <label id="12">
-                            <property name="backgroundColor">silver</property>
-                            <property name="borderBottomStyle">solid</property>
-                            <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftStyle">solid</property>
-                            <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightStyle">solid</property>
-                            <property name="borderRightWidth">thin</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <property name="textAlign">left</property>
+                <row id="55">
+                    <cell id="56">
+                        <label id="57">
                             <text-property name="text">Codigo</text-property>
                         </label>
                     </cell>
-                    <cell id="13">
-                        <label id="14">
-                            <property name="backgroundColor">silver</property>
-                            <property name="borderBottomStyle">solid</property>
-                            <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftStyle">solid</property>
-                            <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightStyle">solid</property>
-                            <property name="borderRightWidth">thin</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <property name="textAlign">left</property>
+                    <cell id="58">
+                        <label id="59">
                             <text-property name="text">Loja</text-property>
                         </label>
                     </cell>
-                    <cell id="15">
-                        <label id="16">
-                            <property name="backgroundColor">silver</property>
-                            <property name="borderBottomStyle">solid</property>
-                            <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftStyle">solid</property>
-                            <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightStyle">solid</property>
-                            <property name="borderRightWidth">thin</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <property name="textAlign">left</property>
+                    <cell id="60">
+                        <label id="61">
                             <text-property name="text">Nome</text-property>
                         </label>
                     </cell>
                 </row>
             </header>
             <detail>
-                <row id="17">
-                    <cell id="18">
-                        <data id="19">
-                            <property name="borderBottomStyle">solid</property>
-                            <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftStyle">solid</property>
-                            <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightStyle">solid</property>
-                            <property name="borderRightWidth">thin</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
+                <row id="62">
+                    <cell id="63">
+                        <data id="64">
                             <property name="resultSetColumn">A1_COD</property>
                         </data>
                     </cell>
-                    <cell id="20">
-                        <data id="21">
-                            <property name="borderBottomStyle">solid</property>
-                            <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftStyle">solid</property>
-                            <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightStyle">solid</property>
-                            <property name="borderRightWidth">thin</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
+                    <cell id="65">
+                        <data id="66">
                             <property name="resultSetColumn">A1_LOJA</property>
                         </data>
                     </cell>
-                    <cell id="22">
-                        <data id="23">
-                            <property name="borderBottomStyle">solid</property>
-                            <property name="borderBottomWidth">thin</property>
-                            <property name="borderLeftStyle">solid</property>
-                            <property name="borderLeftWidth">thin</property>
-                            <property name="borderRightStyle">solid</property>
-                            <property name="borderRightWidth">thin</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
+                    <cell id="67">
+                        <data id="68">
                             <property name="resultSetColumn">A1_NOME</property>
                         </data>
                     </cell>
                 </row>
             </detail>
             <footer>
-                <row id="24">
-                    <cell id="25"/>
-                    <cell id="26"/>
-                    <cell id="27"/>
+                <row id="69">
+                    <cell id="70"/>
+                    <cell id="71"/>
+                    <cell id="72"/>
                 </row>
             </footer>
         </table>
