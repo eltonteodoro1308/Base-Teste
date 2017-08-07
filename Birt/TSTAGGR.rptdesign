@@ -40,6 +40,10 @@
             <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
             <property name="jarList">C:\Users\elton.alves\Documents\Google Drive\Apps\sqljdbc_4.0\ptb\sqljdbc4.jar</property>
         </oda-data-source>
+        <oda-data-source extensionID="com.totvs.tds.birt.oda.protheus" name="Data Source1" id="116">
+            <text-property name="displayName"></text-property>
+            <property name="com_totvs_tds_birt_connection_service">br.com.totvs.tds.birt.connection.rpc</property>
+        </oda-data-source>
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="Data Set" id="8">
