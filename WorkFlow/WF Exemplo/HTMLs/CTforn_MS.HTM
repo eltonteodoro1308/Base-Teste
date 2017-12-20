@@ -1,0 +1,594 @@
+<html>
+<head>
+<title>Expresso Mirassol - Cota&ccedil;&atilde;o Eletr&ocirc;nica</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="" type="text/css">
+
+<style>
+BODY {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+DIV {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TABLE {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+FORM {
+	MARGIN: 0px
+}
+A:link {
+	COLOR: #2d2dcb
+}
+A:visited {
+	COLOR: #2d2dcb
+}
+A:active {
+	COLOR: #2d2dcb
+}
+A:hover {
+	COLOR: #2d2dcb
+}
+INPUT {
+	FONT-FAMILY: Courier; FONT-SIZE: 12px
+}
+SELECT {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 12px
+}
+.Yellow {
+	BACKGROUND-COLOR: #e8e028
+}
+.NormalYellow {
+	COLOR: #e8e028; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px
+}
+.TableRowYellow {
+	BACKGROUND-COLOR: #FFFFCC; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.NormalRedBold {
+	COLOR: #ff0000; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.NormalCommentField {
+	FONT-FAMILY: Courier; FONT-SIZE: 12px
+}
+.NormalBold {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.Mini {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.MiniError {
+	COLOR: #ff3333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.MidleBold {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.Small {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.SmallRight {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: right
+}
+.SmallBold {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.SmallBoldHeight {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; LINE-HEIGHT: 17px
+}
+.TitleSmall {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.TitleSmallRight {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: right
+}
+.TitleSmallCenter {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: center
+}
+.TitleSmallSalmon {
+	COLOR: #ffbfbf; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px
+}
+.TitleMedium {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 16px; TEXT-ALIGN: left
+}
+.TitleMediumBold {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: bold; LINE-HEIGHT: 24px; TEXT-ALIGN: left
+}
+.TitleMediumRight {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: right
+}
+.TitleMediumCenter {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: center
+}
+.TitleBig {
+	COLOR: #008080; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: left
+}
+.TitleBigRight {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: right
+}
+.TitleBigCenter {
+	BACKGROUND-COLOR: #f7f7f7;COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: center
+}
+.TitlePopupWhite {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 16px; FONT-WEIGHT: normal; LINE-HEIGHT: 18px; TEXT-ALIGN: right
+}
+.TableColumnTitle {
+	BACKGROUND-COLOR: #FFFF99; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; VERTICAL-ALIGN: top
+}
+.TableColumnTitleCenter {
+	BACKGROUND-COLOR: #ffddcb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowGrey {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyCenter {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowGreyForm {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowErrorForm {
+	BACKGROUND-COLOR: #ff3333; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowGreyTitleMedium {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyDark {
+	BACKGROUND-COLOR: #ececec; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyDarkMini {
+	BACKGROUND-COLOR: #008080; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowGreyMini {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowSalmon {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowSalmonCenter {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowSalmonForm {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowSalmonFormMini {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.TableRowWhite {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowWhiteCenter {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowWhiteForm {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowWhiteMini {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowWhiteMini2 {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlueTitleMedium {
+	BACKGROUND-COLOR: #000000; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 28px; VERTICAL-ALIGN: top ; FONT-WEIGHT: bold
+}
+.TableRowBlueDark {
+	BACKGROUND-COLOR: #000000 ; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; VERTICAL-ALIGN: top
+}
+.TableRowBlueDarkMini {
+	BACKGROUND-COLOR: #000000 ; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; ;FONT-WEIGHT:BOLD;VERTICAL-ALIGN: top
+}
+.TableRowBlueMini {
+	BACKGROUND-COLOR: #000000; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlue {
+	BACKGROUND-COLOR: #000000; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.fc1-0 { COLOR:808080;FONT-SIZE:7PT;FONT-FAMILY:Arial;FONT-WEIGHT:NORMAL;}
+.fc1-1 { COLOR:000000;FONT-SIZE:7PT;FONT-FAMILY:Arial;FONT-WEIGHT:NORMAL;}
+.fc1-2 { COLOR:000000;FONT-SIZE:7PT;FONT-FAMILY:Arial;FONT-WEIGHT:BOLD;}
+.fc1-3 { COLOR:000000;FONT-SIZE:10PT;FONT-FAMILY:Arial;FONT-WEIGHT:BOLD;}
+.fc1-4 { COLOR:000000;FONT-SIZE:11PT;FONT-FAMILY:Times New Roman;FONT-WEIGHT:NORMAL;}
+.fc1-5 { COLOR:000000;FONT-SIZE:8PT;FONT-FAMILY:Arial;FONT-WEIGHT:BOLD;}
+.fc1-6 { COLOR:000000;FONT-SIZE:8PT;FONT-FAMILY:Arial;FONT-WEIGHT:NORMAL;}
+.ad1-0 {border:0PX none 000000; }
+.ad1-1 {border:0PX none 000000; }
+.ad1-2 {border-left:1PX solid 000000; border-right:0PX none 000000; border-top:0PX none 000000; border-bottom:0PX none 000000; }
+.ad1-3 {border-left:0PX none 000000; border-right:0PX none 000000; border-top:1PX solid 000000; border-bottom:0PX none 000000; }
+.style3 {COLOR: #ff0000; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold; }
+.style4 {color: #666666}
+.style5 {
+	color: #FF0000;
+	font-weight: bold;
+	font-style: italic;
+}
+.style6 {
+	color: #FF0000;
+	font-style: italic;
+}
+.style7 {color: #FF0000}
+</style>
+
+<script language=JavaScript1.2>
+
+//----------------------------------------------
+function formatCurrency(num, dec) {         // Efetua formatação para valor numerico com 2 casas decimais.
+
+if (arguments.length == 1)
+  dec = 2;
+
+fator = 1;
+
+for (n=1; n<=dec; n++)
+fator=fator*10;
+
+num=num.toString().replace(/\$|\,/g,'');
+if(isNaN(num)) num = 0;
+cents=Math.floor((num*fator+0.5)%fator);
+num=Math.floor((num*fator+0.5)/fator).toString();
+
+if(cents.toString().length < dec) {
+for (n=cents.toString().length; n<dec; n++)
+cents="0"+cents;
+}
+for (var i=0;i< Math.floor((num.length-(1+i))/3);i++)
+num=num.substring(0,num.length-(4*i+3))+num.substring(num.length-(4*i+3));
+
+return(num+'.'+cents)
+}
+
+//----------------------------------------------
+function DoCalcTot() {     // Calcular Total de Todos os Itens da Cotação
+   // O método/propriedade "all" é especifico do IE
+   //var oElements = document.all['form1'].elements; 
+   
+   // para o FF ou IE
+   var oElements = document.getElementById("form1").getElementsByTagName("*")
+
+   var nTot = 0;
+   var nTotIPI = 0;
+
+ 
+   for (i=0; i < oElements.length; i++)
+   {
+     // No FF propriedades não inicializadas podem gerar erro dependendo do que for fazer
+     // . como nem todos os elementos retornados em oElements possue 'name' definido
+     //   ocorria erro (o IE engole)
+     if (oElements[i].name) {
+        if (oElements[i].name.indexOf('T.14') > -1)
+         nTot = nTot + eval(oElements[i].value)
+      else if (oElements[i].name.indexOf('T.9') > -1)
+         nTotIPI = nTotIPI + eval(oElements[i].value);
+     }
+   }
+   nTot = nTot + nTotIPI;
+   
+     oElements["TOTCOT"].value = formatCurrency(nTot);
+}
+
+
+function id( el ){
+        return document.getElementById( el );
+}
+function total( un, qnt )
+{
+        return un * qnt;
+}
+window.onload = function()
+{
+        id('VRUNIT').onkeyup = function()
+        {
+                id('TOTAL').value = total( this.value , id('QUANT').value );
+        }      
+        id('QUANT').onkeyup = function()
+        {
+                id('TOTAL').value = total( id('VRUNIT').value , this.value );
+        }
+}
+
+
+//----------------------------------------------
+function DoCalc(poField) {
+
+   var nPos = poField.name.lastIndexOf('.');
+   var oElements = poField.form.elements;
+   var cFieldQuant = "T.6."  + poField.name.substr(nPos+1, 3);
+   var cFieldPreco = "T.7."  + poField.name.substr(nPos+1, 3);
+   var cFieldValor = "T.8."  + poField.name.substr(nPos+1, 3);
+   var cFieldDesc  = "T.9."  + poField.name.substr(nPos+1, 3);
+   var cFieldIPI   = "T.10." + poField.name.substr(nPos+1, 3);
+   var nValor = eval(oElements[cFieldQuant].value) * eval(oElements[cFieldPreco].value);
+   var nDesc = eval(oElements[cFieldDesc].value);
+
+   poField.form.elements[cFieldValor].value = formatCurrency(nValor);
+
+	if (nDesc > nValor )
+	{
+		alert("Desconto não pode ser maior que o valor informado");
+		oElements[cFieldDesc].value = 0;
+	}
+
+   if (poField.name.substr(0, nPos) == "T.7")
+   {
+     oElements[cFieldValor].value =  nValor - eval(poField.value)
+   } 
+   else if (poField.name.substr(0, nPos) == "T.6")
+   {
+     oElements[cFieldValor].value = eval(poField.value) * eval(oElements[cFieldQuant].value);
+     DoCalc_IPI(oElements[cFieldIPI]);
+   }
+   //DoCalcTot(poField);
+}
+
+//----------------------------------------------
+function DoCalc_IPI(poField) {         // Exit do it.ipi
+var nPos = poField.name.lastIndexOf('.');
+var cFieldValIPI = "T.9." + poField.name.substr(nPos+1, 3);
+var nValor = eval(poField.form.elements["T.14." + poField.name.substr(nPos+1, 3)].value);
+if (poField.value > 0)
+poField.form.elements[cFieldValIPI].value = ((eval(poField.value) / 100)) * nValor
+else
+poField.form.elements[cFieldValIPI].value = 0;
+//DoCalcTot(poField);
+}
+//----------------------------------------------
+function placeFocus() {                // Posiciona o Foco no primeiro campo do documento.
+   if (document.forms.length > 0) {
+      var field = document.forms[0];
+      for (i = 0; i < field.length; i++) {
+          if ((field.elements[i].type == "text") || (field.elements[i].type == "textarea") || (field.elements[i].type.toString().charAt(0) == "s")) {
+             document.forms[0].elements[i].focus();
+          break;
+          }
+      }
+   }
+}
+
+//----------------------------------------------
+function validaForm(NomeForm){
+  if (document.all['TOTCOT'].value == 0)
+  {
+	  alert("Informe pelo menos 1 item na cotação ou clique no botão atualizar.");
+	  return false;
+  }
+
+
+   var oElements = NomeForm.form.elements;
+   for (i=0; i < oElements.length; i++)
+   {
+   		var nPos = oElements[i].name.lastIndexOf('.');
+		var cFieldItem  = "T.1." + oElements[i].name.substr(nPos+1, 3);
+		var cFieldPrazo = "T.10." + oElements[i].name.substr(nPos+1, 3);
+	    if (oElements[i].name.indexOf('T.6') > -1)
+	    {
+	    	if (oElements[i].value > 0)
+	    	{
+	    	 	if (oElements[cFieldPrazo].value == 0)
+	    		{
+	    			alert("Informar o Prazo no item No. " + oElements[cFieldItem].value);
+	    			return false;
+	    		}
+	    	}
+		}
+	}
+
+  DoCalcTot();
+
+  document.form1.submit();
+
+}
+</script>
+
+
+<body>
+<FORM name="CTForn_EL" id="CTForn_EL" action="WFHTTPRET.APL" method="post">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="88%"><b><font size="5" color="#000000">Cotação Eletr&ocirc;nica No. %C8_NUM%</font></b></td>
+    <td width="11%" align="center" class="TitleBig style4" style="text-align: center">
+      	<img border="0" src="http://logo.empregos.com.br/38201_G.jpg"></td>
+  </tr>
+</table>
+
+<div align="left">
+
+        <table border="0" width="100%" bordercolor="#000000" height="86">
+		  <tr>
+		    <td bgcolor="#000000" bordercolor="#666666">
+			<b>
+			<font size="2" color="#FFFFFF">&nbsp;</font><font size="3" color="#FFFFFF">Dados 
+			do Fornecedor</font></b></td>
+		  </tr>
+
+          <tr>
+            <td width="100%">
+			<font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>!A2_NREDUZ!&nbsp;</b>&nbsp;&nbsp; (!A2_COD! - !A2_LOJA!)<br>
+              			<br><b>Endereço: </b>!A2_END!
+              !A2_BAIRRO!&nbsp; -&nbsp; !A2_MUN! - !A2_EST! - <b>Telefone</b> : !A2_TEL! 
+			<b>Fax</b> : !A2_FAX!              &nbsp;</font></td>
+          </tr>
+    </table>
+</div>
+
+
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+  <tr>
+    <td class="SmallBold" 	width="8%" align="right">&nbsp;</td>
+    <td class="Small"    	width="49%" colspan="4">&nbsp;</td>
+    <td class="SmallBold" 	width="17%">
+	&nbsp;</td>
+    <td class="Small" 		width="25%">
+	&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="SmallBold" 	width="8%" align="right">
+	<p align="right"><b><font size="2">Tipo Frete</font></b></td>
+    <td class="Small" 		width="13%"><select size="1" name="D7"><option selected>%TPFRETE%</option></select></td>
+    <td class="Small" 		width="15%" align="right">
+	<b><font size="2">Condição de Pagamento</font></b></td>
+    <td class="Small" 		width="26%" colspan="2"><select size="1" name="D5"><option selected>%E4_COND%</option></select></td>
+    <td class="SmallBold" 	width="17%">
+	<p align="right"><font size="2">Validade da Cota&ccedil;&atilde;o </font> </td>
+    <td class="Small" 		width="25%"><font size="2">!C8_VALIDA!</font></td>
+  </tr>
+  <tr>
+    <td class="SmallBold" 	width="8%" align="right">
+	<p align="right"><font size="2">Valor Frete</font></td>
+    <td class="Small" 		width="13%">
+	    <input type="text" name="T31" maxlength="40" value="%frete%" onFocus="this.select()" onBlur="this.value=formatCurrency(this.value,2)" size="19"><td class="SmallBold" 	width="10%" colspan="2">
+	&nbsp;</td>
+ </b></select></td>
+    <td class="Small" 		width="26%">
+	&nbsp;</td>
+    <td class="SmallBold" 	width="17%">
+	<p align="right"><font size="2">Contato</font></td>
+    <td class="Small" 		width="25%">
+	<input type="text" name="T8" maxlength="40" value="%contato%" size="30"></td>  </tr>
+  </table>
+
+        <table border="0" width="100%">
+          <tr>
+			<td class="TableRowBlueDarkMini" width="3%"><font face="Verdana" color="#FFFFFF" size="2">Item</font></td>
+			<td class="TableRowBlueDarkMini" width="10%"><font face="Verdana" color="#FFFFFF" size="2">Codigo </font></td>
+			<td class="TableRowBlueDarkMini" width="42%"><font face="Verdana" color="#FFFFFF" size="2">Descrição da Mercadoria</font></td>
+			<td class="TableRowBlueDarkMini" width="4%" align="center"><font face="Verdana" color="#FFFFFF" size="2">Unid</font></td>
+			<td class="TableRowBlueDarkMini" width="5%" align="right"><font face="Verdana" color="#FFFFFF" size="2">Qtde</font></td>
+			<td class="TableRowBlueDarkMini" width="8%"><p align="right"><font face="Verdana" color="#FFFFFF" size="2">Valor Unitário</font></td>
+			<td class="TableRowBlueDarkMini" width="8%"><p align="right"><font face="Verdana" color="#FFFFFF" size="2">
+			Vr.Desconto</font></td>
+			<td class="TableRowBlueDarkMini" width="5%"><p align="right"><font face="Verdana" color="#FFFFFF" size="2">IPI (%)</font></td>
+			<td class="TableRowBlueDarkMini" width="8%">
+			<p align="center"><font face="Verdana" size="2">Data Necessidade</font></td>
+			<td class="TableRowBlueDarkMini" width="9%"><p align="center"><font face="Verdana" color="#FFFFFF" size="2">Prazo 
+			entrega (dias)</font></td>
+          </tr>
+		  <tbody>
+          <tr>
+            <td class="TableRowWhiteMini2" width="3%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">	<span style="font-size: 9pt">%t.1%</span></td>
+			<td class="TableRowWhiteMini2" width="10%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0"><span style="font-size: 9pt">%t.2%</span></td>
+            <td class="TableRowWhiteMini2" width="42%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0"><span style="font-size: 9pt">%t.3% %t.4%</span></td>
+            <td class="TableRowWhiteMini2" width="4%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0" >
+			<p align="center"><span style="font-size: 9pt">%t.5%</span></td>
+            <td class="TableRowWhiteMini2" width="5%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">
+			<p align="right"><span style="font-size: 9pt">%t.6%</span></td>
+            <td class="TableRowWhiteMini2" width="8%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">	<input  name="VRUNIT" size="11" maxlength="12" value="%t.7%" onFocus="this.select()" onBlur="this.value=formatCurrency(this.value,6)" onChange="DoCalc(this)" style="text-align: Right; float:right"></td>
+            <td class="TableRowWhiteMini2" width="8%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">	<input  name="T3"     size="11" maxlength="5"  value="%t.9%" onFocus="this.select()" onBlur="this.value=formatCurrency(this.value,2)"  style="text-align: Right; float:right"></td>
+			<td class="TableRowWhiteMini2" width="5%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">	<input  name="T3"     size="7"  maxlength="5"  value="%t.10%" onFocus="this.select()" onBlur="this.value=formatCurrency(this.value,2)"  style="text-align: Right; float:right"></td>
+            <td class="TableRowWhiteMini2" width="8%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">	
+			<p align="center"><span style="font-size: 9pt">%t.10a%</span></td>
+            <td class="TableRowWhiteMini2" width="9%" style="border-bottom-style: solid; border-bottom-width: 1px; vertical-align:middle" bordercolor="#C0C0C0">	<p align="center">
+			<input type="text"  name="T4"  maxlength="3"  value="%t.11%" style="text-align: Right" onFocus="this.select()" size="6"  ></td>
+          	</tr>
+  		  </tbody>
+       </table>
+
+
+<table width="100%" border="0" height="24">
+<tr>
+  <td class="Mini"></td>
+</tr>
+<tr>
+     <td width="100%" class="TableRowGreyMini">
+
+
+<div align="center">
+<table class="TableRowYellow" width="646" height="156" style="border-collapse: collapse">
+
+   <tr>
+       <td width="640" bgcolor="#FFFF99">
+           <table height="173" width="640" cellspacing="0" cellpadding="0" border="1" bordercolor="#FFFFFF">
+               <tr>
+                   <td width="640" height="27" class="TableColumnTitle" style="background-color: #000000; vertical-align:middle">
+					<p align="center">
+					<font color="#000000" size="2">&nbsp;</font><font color="#FFFFFF" size="3">Resposta 
+					(escolha a opção e clique em [Enviar]</font></td>
+               </tr>
+               <tr>
+                   <td width="640" height="50" bgcolor="#FFFF99">
+					<font size="2" color="#FFFFFF" face="Tahoma">
+                   <input type="radio" checked name="OPC" value="%OPC%S"></font><font face="Verdana" size="2">Participar da cotação</font><br>
+                   	<font size="2" color="#FFFFFF" face="Tahoma">
+                   <input type="radio"         name="OPC" value="%OPC%N"></font><font face="Verdana" size="2">Não participar (Favor especificar motivo)
+                   </font>
+					</td>
+               </tr>
+               <tr>
+                   <td width="640" height="38" valign="top" bgcolor="#FFFF99">
+					<p align="center"><font face="Tahoma" size="1">
+                       <textarea name="OBS" rows="2" cols="75"
+                          >%OBS%</textarea></font></td>
+               </tr>
+              <tr>
+                   <td width="640" height="56" bgcolor="#FFFF99"><font face="Tahoma">
+							<font size="2">
+							<input type="hidden" name="CHAVE" 		value="%CHAVE%">
+							<input type="hidden" name="CFILANT" 	value="%CFILANT%">
+							<input type="hidden" name="C7_FILENT" 	value="%C7_FILENT%">
+							<input type="hidden" name="WFID" 		value="%WFID%">
+                   
+       				   	</font>
+                   
+       				   	<p align="center">
+                   
+						<br>
+                   
+						<font size="2">
+                   
+						<input type="button" onClick="submit()" name="B1" value="Enviar" type="submit"></font>
+						<font size="2">
+       					<input name="B4" value="Limpar" type="reset"></font>
+                    <br>
+                   
+                    </font></td>
+              </tr>
+              
+           </table>
+       </td>
+   </tr>
+</form>
+
+	
+      </table>
+
+
+<p align="center"></p>
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+	<TR>		<TD bgColor=#666666 bordercolor="#666666"><IMG height=3 src="file:///E|/Work_Afip/pic_invis.gif" width=1></TD>
+</TR>
+</TABLE>
+
+
+</div>
+
+<table border="0" width="100%">
+  <tbody>
+  <td class="Mini"></td>
+
+	&nbsp;
+	<tr>
+      <td class="Mini">Atenciosamente,</td>
+    </tr>
+	
+  </tbody>
+</table>
+
+<table border="0" width="100%">
+  <tbody>
+  <td class="Mini2"></td>
+
+	&nbsp;
+	
+	<tr>
+      <td class="Mini">Workflow 
+		<span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;">
+		Expresso Mirassol</span> - Mensagem automática.</td>
+    </tr>
+  
+  </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+Group MODELO
+   Version=7.0
+   VSSDB=
+   HasProperties=1
+   Properties
+      BeforeApply=
+      AfterApply=
+      Icon=
+      ID=
+      Version=
+      PalmName=
+      OutPut=
+   End
+   ProjectsCount=2
+   Project WFPC
+      FoldersCount=1
+      Folder Fontes
+         VSSPath=Fontes
+         FilesCount=1
+         File \totvs\clientes\pianta\fontes\wfpc.prw
+             Type=T
+         End
+      End
+   End
+   Project WFSC
+      FoldersCount=1
+      Folder Fontes
+         VSSPath=Nova Pasta1
+         FilesCount=5
+         File \totvs\Clientes\Pianta\Fontes\MT110BLO.PRW
+             Type=T
+         End
+         File \totvs\Clientes\Pianta\Fontes\MT110FIL.PRW
+             Type=T
+         End
+         File \totvs\Clientes\Pianta\Fontes\MT110GRV.prw
+             Type=T
+         End
+         File \totvs\Clientes\Pianta\Fontes\MT110VLD.PRW
+             Type=T
+         End
+         File \totvs\Clientes\Pianta\Fontes\WFSC.PRW
+             Type=T
+         End
+      End
+   End
+End

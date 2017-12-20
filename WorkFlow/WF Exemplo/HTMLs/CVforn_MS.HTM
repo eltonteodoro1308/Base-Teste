@@ -1,0 +1,486 @@
+<html>
+<head>
+<title>Expresso Mirassol - Cota&ccedil;&atilde;o Eletr&ocirc;nica</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="" type="text/css">
+
+<style>
+BODY {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+DIV {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TABLE {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+FORM {
+	MARGIN: 0px
+}
+A:link {
+	COLOR: #2d2dcb
+}
+A:visited {
+	COLOR: #2d2dcb
+}
+A:active {
+	COLOR: #2d2dcb
+}
+A:hover {
+	COLOR: #2d2dcb
+}
+INPUT {
+	FONT-FAMILY: Courier; FONT-SIZE: 12px
+}
+SELECT {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 12px
+}
+.Yellow {
+	BACKGROUND-COLOR: #e8e028
+}
+.NormalYellow {
+	COLOR: #e8e028; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px
+}
+.TableRowYellow {
+	BACKGROUND-COLOR: #FFFFCC; COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.NormalRedBold {
+	COLOR: #ff0000; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.NormalCommentField {
+	FONT-FAMILY: Courier; FONT-SIZE: 12px
+}
+.NormalBold {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.Mini {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.MiniError {
+	COLOR: #ff3333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.MidleBold {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.Small {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.SmallRight {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: right
+}
+.SmallBold {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.SmallBoldHeight {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; LINE-HEIGHT: 17px
+}
+.TitleSmall {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.TitleSmallRight {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: right
+}
+.TitleSmallCenter {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: center
+}
+.TitleSmallSalmon {
+	COLOR: #ffbfbf; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px
+}
+.TitleMedium {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 16px; TEXT-ALIGN: left
+}
+.TitleMediumBold {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: bold; LINE-HEIGHT: 24px; TEXT-ALIGN: left
+}
+.TitleMediumRight {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: right
+}
+.TitleMediumCenter {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: center
+}
+.TitleBig {
+	COLOR: #008080; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: left
+}
+.TitleBigRight {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: right
+}
+.TitleBigCenter {
+	BACKGROUND-COLOR: #f7f7f7;COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: center
+}
+.TitlePopupWhite {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 16px; FONT-WEIGHT: normal; LINE-HEIGHT: 18px; TEXT-ALIGN: right
+}
+.TableColumnTitle {
+	BACKGROUND-COLOR: #FFFF99; COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; VERTICAL-ALIGN: top
+}
+.TableColumnTitleCenter {
+	BACKGROUND-COLOR: #ffddcb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowGrey {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyCenter {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowGreyForm {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowErrorForm {
+	BACKGROUND-COLOR: #ff3333; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowGreyTitleMedium {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyDark {
+	BACKGROUND-COLOR: #ececec; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyDarkMini {
+	BACKGROUND-COLOR: #008080; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowGreyMini {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowSalmon {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowSalmonCenter {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowSalmonForm {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowSalmonFormMini {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.TableRowWhite {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowWhiteCenter {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowWhiteForm {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowWhiteMini {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowWhiteMini2 {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlueTitleMedium {
+	BACKGROUND-COLOR: #022141; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 28px; VERTICAL-ALIGN: top ; FONT-WEIGHT: bold
+}
+.TableRowBlueDark {
+	BACKGROUND-COLOR: #022141 ; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; VERTICAL-ALIGN: top
+}
+.TableRowBlueDarkMini {
+	BACKGROUND-COLOR: #022141 ; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; ;FONT-WEIGHT:BOLD;VERTICAL-ALIGN: top
+}
+.TableRowBlueMini {
+	BACKGROUND-COLOR: #074b85; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlue {
+	BACKGROUND-COLOR: #074b85; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.fc1-0 { COLOR:808080;FONT-SIZE:7PT;FONT-FAMILY:Arial;FONT-WEIGHT:NORMAL;}
+.fc1-1 { COLOR:000000;FONT-SIZE:7PT;FONT-FAMILY:Arial;FONT-WEIGHT:NORMAL;}
+.fc1-2 { COLOR:000000;FONT-SIZE:7PT;FONT-FAMILY:Arial;FONT-WEIGHT:BOLD;}
+.fc1-3 { COLOR:000000;FONT-SIZE:10PT;FONT-FAMILY:Arial;FONT-WEIGHT:BOLD;}
+.fc1-4 { COLOR:000000;FONT-SIZE:11PT;FONT-FAMILY:Times New Roman;FONT-WEIGHT:NORMAL;}
+.fc1-5 { COLOR:000000;FONT-SIZE:8PT;FONT-FAMILY:Arial;FONT-WEIGHT:BOLD;}
+.fc1-6 { COLOR:000000;FONT-SIZE:8PT;FONT-FAMILY:Arial;FONT-WEIGHT:NORMAL;}
+.ad1-0 {border:0PX none 000000; }
+.ad1-1 {border:0PX none 000000; }
+.ad1-2 {border-left:1PX solid 000000; border-right:0PX none 000000; border-top:0PX none 000000; border-bottom:0PX none 000000; }
+.ad1-3 {border-left:0PX none 000000; border-right:0PX none 000000; border-top:1PX solid 000000; border-bottom:0PX none 000000; }
+.style3 {COLOR: #ff0000; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: bold; }
+.style4 {color: #666666}
+.style5 {
+	color: #FF0000;
+	font-weight: bold;
+	font-style: italic;
+}
+.style6 {
+	color: #FF0000;
+	font-style: italic;
+}
+.style7 {color: #FF0000}
+</style>
+
+<script language=JavaScript1.2>
+//----------------------------------------------
+function valuni() {
+	alert("Informe o valor unitário do produto para cada item");
+}
+//----------------------------------------------
+function desuni() {
+	alert("Informe o valor do desconto unitário para cada item");
+}
+//----------------------------------------------
+function ipiuni() {
+	alert("Informe quando houver o valor do IPI para cada item");
+}
+//----------------------------------------------
+function przuni() {
+	alert("Informe o prazo de entrega para cada item cotado");
+}
+//----------------------------------------------
+function preuni() {
+	alert("Informe a data de previsão de entrega para cada item . Formato: dd/mm/aa");
+}
+//----------------------------------------------
+function conpag() {
+	alert("Selecione a condição de pagamento para cada item cotado");
+}
+//----------------------------------------------
+function obsuni() {
+	alert("Descreva uma observação para este item, como exemplo motivo da não cotação");
+}
+//----------------------------------------------
+function locent() {
+	alert("Local para entrega de Mercadoria");
+}
+//----------------------------------------------
+function locfat() {
+	alert("Local para Faturamento ");
+}
+//----------------------------------------------
+function contato() {
+	alert("Pessoa de contato no fornecedor, responsavel pelo preenchimento da Cotação");
+}
+//----------------------------------------------
+function tipfre() {
+	alert("Selecionar o Tipo de Frete envolvido na Operação");
+}
+//----------------------------------------------
+//----------------------------------------------
+function desconto() {
+	alert("Desconto em cascata sob o Valor Total da Cotação");
+}
+//----------------------------------------------
+function valdes() {
+	alert("Valor do Desconto sob o Valor Total da Cotação.");
+}
+//----------------------------------------------
+function enviar() {
+	alert("Pressione este botão para confirmar os dados digitados para a cotação, ao pressionar os dados preenchidos serão reenviados para o Remetente.");
+}
+//----------------------------------------------
+function limpar() {
+	alert("Pressione este botão se desejar limpar todos os dados digitados para poder inseri-los novamente.");
+}
+//----------------------------------------------
+function formatCurrency(num, dec) {         // Efetua formatação para valor numerico com 2 casas decimais.
+
+if (arguments.length == 1)
+  dec = 2;
+
+fator = 1;
+
+for (n=1; n<=dec; n++)
+fator=fator*10;
+
+num=num.toString().replace(/\$|\,/g,'');
+if(isNaN(num)) num = 0;
+cents=Math.floor((num*fator+0.5)%fator);
+num=Math.floor((num*fator+0.5)/fator).toString();
+
+if(cents.toString().length < dec) {
+for (n=cents.toString().length; n<dec; n++)
+cents="0"+cents;
+}
+for (var i=0;i< Math.floor((num.length-(1+i))/3);i++)
+num=num.substring(0,num.length-(4*i+3))+num.substring(num.length-(4*i+3));
+
+return(num+'.'+cents)
+}
+
+//----------------------------------------------
+function DoCalcTot() {     // Calcular Total de Todos os Itens da Cotação
+   // O método/propriedade "all" é especifico do IE
+   //var oElements = document.all['form1'].elements; 
+   
+   // para o FF ou IE
+   var oElements = document.getElementById("form1").getElementsByTagName("*")
+
+   var nTot = 0;
+   var nTotIPI = 0;
+
+ 
+   for (i=0; i < oElements.length; i++)
+   {
+     // No FF propriedades não inicializadas podem gerar erro dependendo do que for fazer
+     // . como nem todos os elementos retornados em oElements possue 'name' definido
+     //   ocorria erro (o IE engole)
+     if (oElements[i].name) {
+        if (oElements[i].name.indexOf('T.14') > -1)
+         nTot = nTot + eval(oElements[i].value)
+      else if (oElements[i].name.indexOf('T.9') > -1)
+         nTotIPI = nTotIPI + eval(oElements[i].value);
+     }
+   }
+   nTot = nTot + nTotIPI;
+   
+     oElements["TOTCOT"].value = formatCurrency(nTot);
+}
+
+//----------------------------------------------
+function DoCalc(poField) {
+
+   var nPos = poField.name.lastIndexOf('.');
+   var oElements = poField.form.elements;
+   var cFieldQuant = "T.5." + poField.name.substr(nPos+1, 3);
+   var cFieldPreco = "T.6." + poField.name.substr(nPos+1, 3);
+   var cFieldValor = "T.14." + poField.name.substr(nPos+1, 3);
+   var cFieldDesc = "T.7." + poField.name.substr(nPos+1, 3);
+   var cFieldIPI = "T.8." + poField.name.substr(nPos+1, 3);
+   var nValor = eval(oElements[cFieldQuant].value) * eval(oElements[cFieldPreco].value);
+   var nDesc = eval(oElements[cFieldDesc].value);
+
+	if (nDesc > nValor )
+	{
+		alert("Desconto não pode ser maior que o valor informado");
+		oElements[cFieldDesc].value = 0;
+	}
+
+   if (poField.name.substr(0, nPos) == "T.7")
+   {
+     oElements[cFieldValor].value =  nValor - eval(poField.value)
+   } else if (poField.name.substr(0, nPos) == "T.6")
+   {
+     oElements[cFieldValor].value = eval(poField.value) * eval(oElements[cFieldQuant].value);
+     DoCalc_IPI(oElements[cFieldIPI]);
+   }
+   //DoCalcTot(poField);
+}
+
+//----------------------------------------------
+function DoCalc_IPI(poField) {         // Exit do it.ipi
+var nPos = poField.name.lastIndexOf('.');
+var cFieldValIPI = "T.9." + poField.name.substr(nPos+1, 3);
+var nValor = eval(poField.form.elements["T.14." + poField.name.substr(nPos+1, 3)].value);
+if (poField.value > 0)
+poField.form.elements[cFieldValIPI].value = ((eval(poField.value) / 100)) * nValor
+else
+poField.form.elements[cFieldValIPI].value = 0;
+//DoCalcTot(poField);
+}
+//----------------------------------------------
+function placeFocus() {                // Posiciona o Foco no primeiro campo do documento.
+   if (document.forms.length > 0) {
+      var field = document.forms[0];
+      for (i = 0; i < field.length; i++) {
+          if ((field.elements[i].type == "text") || (field.elements[i].type == "textarea") || (field.elements[i].type.toString().charAt(0) == "s")) {
+             document.forms[0].elements[i].focus();
+          break;
+          }
+      }
+   }
+}
+
+//----------------------------------------------
+function validaForm(NomeForm){
+  if (document.all['TOTCOT'].value == 0)
+  {
+	  alert("Informe pelo menos 1 item na cotação ou clique no botão atualizar.");
+	  return false;
+  }
+
+
+   var oElements = NomeForm.form.elements;
+   for (i=0; i < oElements.length; i++)
+   {
+   		var nPos = oElements[i].name.lastIndexOf('.');
+		var cFieldItem  = "T.1." + oElements[i].name.substr(nPos+1, 3);
+		var cFieldPrazo = "T.10." + oElements[i].name.substr(nPos+1, 3);
+	    if (oElements[i].name.indexOf('T.6') > -1)
+	    {
+	    	if (oElements[i].value > 0)
+	    	{
+	    	 	if (oElements[cFieldPrazo].value == 0)
+	    		{
+	    			alert("Informar o Prazo no item No. " + oElements[cFieldItem].value);
+	    			return false;
+	    		}
+	    	}
+		}
+	}
+
+  DoCalcTot();
+
+  document.form1.submit();
+
+}
+</script>
+
+
+<body>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="88%"><b><font size="4">Cotação Eletr&ocirc;nica No. 
+	!C8_NUM!</font></b></td>
+    <td width="11%" align="center" class="TitleBig style4" style="text-align: center">
+      	<img border="0" src="http://logo.empregos.com.br/38201_G.jpg"></td>
+  </tr>
+</table>
+
+<form action="mailto:%WFMailTo%" method="post" name="form1">
+
+
+<input type="hidden" name="T30" size="4" maxlength="5" value="%t.9%">
+
+
+<input type="hidden" name="T11" size="12" maxlength="12" value="%t.14%">
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100%>
+		<TD bgColor=#666666 bordercolor="#666666"><IMG height=3 src="file:///E|/Work_Afip/pic_invis.gif" width=1></TD>
+</TABLE>
+
+<div align="left">
+
+
+        <table border="0" width="100%" bordercolor="#DFEFFF">
+		  
+          <tr>
+            <td width="100%">
+			<font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>!A2_NOME!&nbsp;</b>&nbsp;&nbsp; (!C8_FORNECE! - !C8_LOJA!)</font><p>
+			<font face="Verdana, Arial, Helvetica, sans-serif" size="2">Prezados 
+			Srs, </font></p>
+			<p align="center">Convidamos V.Sas. a participar do processo de cotação número 
+			!C8_NUM!. Para participar clique no link abaixo:</p>
+			<p align="center"><a href="!cMailID!"><font size="4">Cotação 
+			eletrônica No. !C8_NUM!</font></a></p>
+			<p>&nbsp;</p>
+			</td>
+          </tr>
+    </table>
+</div>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100%>
+	<TR>
+		<TD bgColor=#666666 bordercolor="#666666"><IMG height=3 src="file:///E|/Work_Afip/pic_invis.gif" width=1></TD></TR>
+</TABLE>
+
+
+</form>
+
+<table width="100%" border="0" height="24">
+<tr>
+  <td class="Mini"></td>
+</tr>
+<tr>
+     <td width="100%" class="TableRowGreyMini">
+
+
+<p>WorkFlow
+<span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;">
+Expresso Mirassol </span>- Enviado em !datetime! </td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>.:: TERRACOM - Pedido de Compras ::.</title>
+  <style>
+BODY {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+DIV {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TABLE {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+FORM {
+	MARGIN: 0px
+}
+A:link {
+	COLOR: #2d2dcb
+}
+A:visited {
+	COLOR: #2d2dcb
+}
+A:active {
+	COLOR: #2d2dcb
+}
+A:hover {
+	COLOR: #2d2dcb
+}
+INPUT {
+	FONT-FAMILY: Courier; FONT-SIZE: 12px
+}
+SELECT {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 12px
+}
+.Yellow {
+	BACKGROUND-COLOR: #e8e028
+}	
+.NormalYellow {
+	COLOR: #e8e028; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px
+}
+.TableRowYellow {
+	BACKGROUND-COLOR: #FFFFCC; COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.NormalRedBold {
+	COLOR: #ff0000; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.NormalCommentField {
+	FONT-FAMILY: Courier; FONT-SIZE: 12px
+}
+.NormalBold {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.Mini {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.MiniError {
+	COLOR: #ff3333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.MidleBold {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.Small {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px
+}
+.SmallRight {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: right
+}
+.SmallBold {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.SmallBoldHeight {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; LINE-HEIGHT: 17px
+}
+.TitleSmall {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.TitleSmallRight {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: right
+}
+.TitleSmallCenter {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-ALIGN: center
+}
+.TitleSmallSalmon {
+	COLOR: #ffbfbf; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 18px; FONT-WEIGHT: normal; LINE-HEIGHT: 20px
+}
+.TitleMedium {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: left
+}
+.TitleMediumBold {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: bold; LINE-HEIGHT: 24px; TEXT-ALIGN: left
+}
+.TitleMediumRight {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: right
+}
+.TitleMediumCenter {
+	COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 22px; FONT-WEIGHT: normal; LINE-HEIGHT: 24px; TEXT-ALIGN: center
+}
+.TitleBig {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: left
+}
+.TitleBigRight {
+	COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: right
+}
+.TitleBigCenter {
+	BACKGROUND-COLOR: #f7f7f7;COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: normal; LINE-HEIGHT: 26px; TEXT-ALIGN: center
+}
+.TitlePopupWhite {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 16px; FONT-WEIGHT: normal; LINE-HEIGHT: 18px; TEXT-ALIGN: right
+}
+.TableColumnTitle {
+	BACKGROUND-COLOR: #FFFF99; COLOR: #074b85; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; VERTICAL-ALIGN: top
+}
+.TableColumnTitleCenter {
+	BACKGROUND-COLOR: #ffddcb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowGrey {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyCenter {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowGreyForm {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowErrorForm {
+	BACKGROUND-COLOR: #ff3333; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowGreyTitleMedium {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #979797; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 19px; VERTICAL-ALIGN: top
+}
+.TableRowGreyDark {
+	BACKGROUND-COLOR: #ececec; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowGreyDarkMini {
+	BACKGROUND-COLOR: #ececec; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowGreyMini {
+	BACKGROUND-COLOR: #f7f7f7; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowSalmon {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowSalmonCenter {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowSalmonForm {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowSalmonFormMini {
+	BACKGROUND-COLOR: #fff2eb; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+.TableRowWhite {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+.TableRowWhiteCenter {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: center; VERTICAL-ALIGN: top
+}
+.TableRowWhiteForm {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; HEIGHT: 22px
+}
+.TableRowWhiteMini {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowWhiteMini2 {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlueTitleMedium {
+	BACKGROUND-COLOR: #074b85; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 19px; VERTICAL-ALIGN: top
+}
+.TableRowBlueDark {
+	BACKGROUND-COLOR: #074b85; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; VERTICAL-ALIGN: top
+}
+.TableRowBlueDarkMini {
+	BACKGROUND-COLOR: #074b85; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlueMini {
+	BACKGROUND-COLOR: #074b85; COLOR: #FFCC00; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.TableRowBlue {
+	BACKGROUND-COLOR: #074b85; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; VERTICAL-ALIGN: top
+}
+  .style14 {font-size: 12px; font-weight: bold; }
+</style>
+</head>
+
+<FORM name="PCAprov_TERRACOM" id="PCAprov_TERRACOM" action="WFHTTPRET.APL" method="post">
+
+<body>
+<table style="width: 100%; height: 53px"  cellspacing="0" cellpadding="0" bordercolor="#01008D">
+  <tbody>
+    <tr>
+    <td style="vertical-align: middle; text-align: center; &gt;
+      &lt;div style=;width: 85%"3">
+	<p style="text-align: left"><font color="#666666"><b><font size="3">
+	Aprovação de %C7_TIPO% No. %C7_NUM% (Filial %C7_FILIAL%)</font></b></font></td>
+      <td style="text-align: center; width: 15%;" height="53"> 
+		<img border="0" src="http://www.terracom.com.br/images/news-logo.png" ></td>
+  </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+
+  <tbody>
+
+    <tr width = "100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="9%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Emiss&atilde;o:
+	</font></span></td>
+
+
+    <td class="Small" width="19%"><font size="2">%C7_EMISSAO%</font></td>
+
+
+    <td class="Small" width="10%">
+	<p align="right">
+	<span style="font-weight: 400"><font size="2" color="#022141">Comprador:</font></span></td>
+
+
+    <td class="Small" width="31%"><font size="2">%C7_USER%</font></td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Total Mercadoria:</font></span></td>
+
+
+    <td class="Small" width="13%" align="right"><font size="2">%C7_VALMERC%</font></td>
+
+
+  </tr>
+
+
+  <tr width="100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="12%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Fornecedor:</font></span></td>
+
+
+    <td class="Small" width="58%" colspan="3"><font size="2">%A2_NOME%</font></td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Total com impostos:</font></span></td>
+
+
+    <td class="Small" width="15%" align="right"><font size="2">%C7_VALBRU%</font></td>
+
+
+  </tr>
+
+
+  <tr width="100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="12%">
+	<font size="2" color="#022141"><span style="font-weight: 400">E-mail</span></font><span style="font-weight: 400"><font size="2" color="#022141">:</font></span></td>
+
+
+    <td class="Small" width="58%" colspan="3">%A2_EMAIL%</td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Frete:</span></td>
+
+
+    <td class="Small" width="15%" align="right"><font size="2">%FRETE%</font></td>
+
+
+  </tr>
+
+
+  <tr width="100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="12%">
+	<font size="2" color="#022141"><span style="font-weight: 400">Contato</span></font><span style="font-weight: 400"><font size="2" color="#022141">:</font></span></td>
+
+
+    <td class="Small" width="58%" colspan="3">%A2_CONTATO%</td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<font size="2" color="#022141"><span style="font-weight: 400">Seguro</span></font><span style="font-weight: 400"><font size="2" color="#022141">:</font></span></td>
+
+
+    <td class="Small" width="15%" align="right"><font size="2">%SEGURO%</font></td>
+
+
+  </tr>
+
+
+  <tr width="100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="12%">
+	<font size="2" color="#022141"><span style="font-weight: 400">Telefone</span></font><span style="font-weight: 400"><font size="2" color="#022141">:</font></span></td>
+
+
+    <td class="Small" width="58%" colspan="3">%A2_TELEFONE%</td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Despesas:</font></span></td>
+
+
+    <td class="Small" width="15%" align="right"><font size="2">%DESPESA%</font></td>
+
+
+  </tr>
+
+
+  <tr width="100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="12%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Cond.Pagamento:</font></span></td>
+
+
+    <td class="Small" width="58%" colspan="3"><font size="2">
+	%E4_DESCRI%</font></td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<span style="font-weight: 400"><font size="2" color="#022141">Descontos:</font></span></td>
+
+
+    <td class="Small" width="15%" align="right"><font size="2">%DESCONTO%</font></td>
+
+
+  </tr>
+
+
+  <tr width="100%">
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="12%">
+	&nbsp;</td>
+
+
+    <td class="Small" width="58%" colspan="3">&nbsp;</td>
+
+
+    <td style="color: rgb(0, 0, 153);" class="SmallBold" align="right" width="15%">
+	<font size="2" color="#022141">Total do 
+	Pedido:</font></td>
+
+
+    <td class="Small" width="15%" align="right"><b><font size="2">%VALTOT%</font></b></td>
+
+
+  </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+	<tbody>
+
+    <tr>
+
+      <td bgcolor="#000000">
+		<img src="../../../../LOGO.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+
+<table style="color: rgb(39, 33, 151);" height="19" width="100%" cellspacing="0">
+
+
+  <tbody>
+
+    <tr>
+
+
+    <td class="TitleSmall" align="center" height="15" width="100%">
+    </td>
+
+
+  </tr>
+
+
+  
+    <tr>
+
+
+    <td class="TitleSmall" align="center" width="100%" bgcolor="#000000">
+    <i><b><font face="Arial" color="#FFFFFF" size="2">&nbsp; Itens</font></b></i></td>
+
+
+  </tr>
+
+
+  
+  </tbody>
+</table>
+
+  
+
+<table style="width: 100%;" border="0" cellspacing="1" height="28">
+  <!-- MSTableType="nolayout" -->
+	<tbody>
+    <tr>
+
+    <td class="TableRowBlueDarkMini" align="center" width="3%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Item</font></td>
+    <td  class="TableRowBlueDarkMini" align="center" width="8%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">C&oacute;digo</font></td>
+    <td class="TableRowBlueDarkMini" align="center" width="30%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Descri&ccedil;&atilde;o</font></td>
+    <td class="TableRowBlueDarkMini" align="center" width="9%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Quant</font></td>
+    <td class="TableRowBlueDarkMini" align="center" width="3%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Unid</font></td>
+    <td  class="TableRowBlueDarkMini" align="center" width="8%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Vr.unitário</font></td>
+    <td  class="TableRowBlueDarkMini" align="center" width="3%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">IPI</font></td>
+    <td class="TableRowBlueDarkMini" align="right" width="11%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Vl.Total</font></td>
+    <td class="TableRowBlueDarkMini" align="center" width="11%" style="background-color: #047EC7">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Entrega em</font></td>
+    <td class="TableRowBlueDarkMini" align="center" width="8%" style="background-color: #047EC7">
+	<p align="right">
+	<font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">
+	Ultimo Preço</font></td>
+  </tr>
+  </tbody>
+  <tbody>
+  <tr>
+    <td class="TableRowWhiteMini2" width="3%" style="border-bottom-style: solid; border-bottom-width: 1px"><p align="center">
+	<font face="Arial" style="font-size: 9pt">%t.1%</font></p></td>
+    <td class="TableRowWhiteMini2" width="8%" style="border-bottom-style: solid; border-bottom-width: 1px">
+	<font face="Arial" style="font-size: 9pt">%t.2%</font></td>
+    <td class="TableRowWhiteMini2" width="30%" style="border-bottom-style: solid; border-bottom-width: 1px">
+	<font face="Arial" style="font-size: 9pt">%t.3%</font></td>
+    <td class="TableRowWhiteMini2" width="9%" style="border-bottom-style: solid; border-bottom-width: 1px">
+	<p align="right">
+	<font face="Arial" style="font-size: 9pt">%t.5%</font></td>
+    <td class="TableRowWhiteMini2" width="3%" style="border-bottom-style: solid; border-bottom-width: 1px"><p align="center">
+	<font face="Arial" style="font-size: 9pt">%t.4%</font></p></td>
+    <td class="TableRowWhiteMini2" width="8%" style="border-bottom-style: solid; border-bottom-width: 1px"><p align="right">
+	<font face="Arial" style="font-size: 9pt">%t.6%</font></p></td>
+    <td class="TableRowWhiteMini2" width="3%" style="border-bottom-style: solid; border-bottom-width: 1px"><p align="right">
+	<font face="Arial" style="font-size: 9pt">%t.7%</font></p></td>
+    <td class="TableRowWhiteMini2" width="11%" style="border-bottom-style: solid; border-bottom-width: 1px" align="right">
+	<p>
+	<font face="Arial" style="font-size: 9pt">%t.8%</font></p></td>
+    <td class="TableRowWhiteMini2" width="11%" style="border-bottom-style: solid; border-bottom-width: 1px">
+	<p align="center">
+	<font face="Arial" style="font-size: 9pt">%t.9%</font></td>
+    <td class="TableRowWhiteMini2" width="8%" style="border-bottom-style: solid; border-bottom-width: 1px">
+	<p align="right">
+	<font face="Arial" style="font-size: 9pt">%t.10%</font></td>
+  </tr>
+  </tbody>	
+
+  
+</table>
+&nbsp;
+        
+
+
+&nbsp;
+        
+
+
+        <table border="0" width="100%">
+          <tbody>
+            <tr>
+              <td style="text-align: right;">
+              <table
+ style="background-color: rgb(255, 255, 255); width: 100%;" border="0"
+ cellspacing="1">
+                <tbody>
+                  <tr>
+                    <td style="background-color: #000000;">
+					<span style="font-weight: bold;"><span
+ class="style14"></span><font face="Arial" size="2">
+					<span style="color: #FFFFFF;font-style:italic">&nbsp;Cota&ccedil;&otilde;es
+efetuadas (por item):</span></font></span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table style="text-align: left; width: 100%;" border="0"
+ cellpadding="1" cellspacing="1">
+                <tbody>
+                  <tr>
+                    <td
+ style="text-align: center; background-color: #047EC7;">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Item</span></font></td>
+                    <td style="background-color: #047EC7;">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Concorr&ecirc;ncia</span></font></td>
+                    <td
+ style="text-align: center; background-color: #047EC7;" width="130">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Entrega</span></font></td>
+                    <td
+ style="width: 135px; background-color: #047EC7">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Cond.Pagto</span></font></td>
+                    <td
+ style="width: 162px; background-color: #047EC7">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Contato</span></font></td>
+                    <td
+ style="text-align: right; width: 128px; background-color: #047EC7">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Quantidade</span></font></td>
+                    <td
+ style="text-align: right; width: 121px; background-color: #047EC7; color: rgb(255, 0, 0)">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Pre&ccedil;o
+Unit&aacute;rio</span></font></td>
+                    <td
+ style="width: 69px; text-align: center; background-color: #047EC7">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">IPI</span></font></td>
+                    <td
+ style="text-align: right; background-color: #047EC7;" width="141">
+					<font face="Arial" color="#FFFFFF"><span
+ class="style14">Valor Total</span></font></td>
+                  </tr>
+                </tbody> <tbody>
+                  <tr>
+                    <td style="text-align: center; width: 6%; border-bottom-style:solid; border-bottom-width:1px">
+					<span style="font-size: 9pt">%tc.1%</span></td>
+                    <td style="border-bottom-style: solid; border-bottom-width: 1px"><span style="font-size: 9pt">%tc.2%</span></td>
+                    <td style="text-align: center; border-bottom-style:solid; border-bottom-width:1px" width="130">
+					<span style="font-size: 9pt">%tc.3%</span></td>
+                    <td style="border-bottom-style: solid; border-bottom-width: 1px"><span style="font-size: 9pt">%tc.4%</span></td>
+                    <td style="border-bottom-style: solid; border-bottom-width: 1px"><span style="font-size: 9pt">%tc.5%</span></td>
+                    <td style="text-align: right; border-bottom-style:solid; border-bottom-width:1px"><span style="font-size: 9pt">%tc.6%</span></td>
+                    <td style="text-align: right; border-bottom-style:solid; border-bottom-width:1px"><span style="font-size: 9pt">%tc.7%</span></td>
+                    <td style="text-align: center; border-bottom-style:solid; border-bottom-width:1px">
+					<span style="font-size: 9pt">%tc.9%</span></td>
+                    <td style="text-align: right; border-bottom-style:solid; border-bottom-width:1px" width="141"><span style="font-size: 9pt">%tc.10%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
+<table style="text-align: left; width: 100%;" border="0"
+ cellpadding="1" cellspacing="1">
+                <tbody>
+                  <tr style="color: rgb(25, 22, 125);">
+                    <td
+ style="background-color: #000000; " colspan="10">
+					<font color="#FFFFFF" face="Arial" size="2">
+					<span style="font-weight: bold; font-style:italic">&nbsp;&Uacute;ltimos Pedidos
+(por item):</span></font></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center; background-color: #047EC7;"><font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Item</font></span></font></td>
+                    <td style="width: 7%; text-align: center; background-color: #047EC7">	<font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Pedido</font></span></font></td>
+                    <td style="text-align: left; background-color: #047EC7; width: 33%">	<font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Fornecedor</font></span></font></td>
+                    <td style="text-align: right; background-color: #047EC7;" width="7%">	<font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Qtde</font></span></font></td>
+                    <td style="text-align: right; width: 6%; background-color: #047EC7; color: rgb(255, 0, 0)">	<font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Pre&ccedil;o Unit.</font></span></font></td>
+                    <td style="text-align: center; width: 5%; background-color: #047EC7">	<font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">IPI</font></span></font></td>
+                    <td style="text-align: center; width: 7%; background-color: #047EC7"><font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Dt.Emiss&atilde;o</font></span></font></td>
+                    <td style="text-align: center; width: 6%; background-color: #047EC7"><font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Dt.Entrega</font></span></font></td>
+                    <td style="width: 10%; background-color: #047EC7">	<font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Cond.Pagto</font></span></font></td>
+                    <td style="text-align: right; width: 8%; background-color: #047EC7"><font face="Arial"><span class="style14">
+					<font style="font-size: 9pt" color="#FFFFFF">Qtde Entregue</font></span></font></td>
+                  </tr>
+                </tbody> <tbody>
+                  <tr>
+                    <td style="text-align: center; width: 4%; border-bottom-style:solid; border-bottom-width:1px" valign="top">					<font face="Arial" color="#FF0000" style="font-size: 9pt">%tp.1%</font></td>
+                    <td style="width: 7%; text-align: center; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.2%</font></td>
+                    <td style="width: 33%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.3%</font></td>
+                    <td style="text-align: right; border-bottom-style:solid; border-bottom-width:1px" width="7%">					<font face="Arial" style="font-size: 9pt">%tp.4%</font></td>
+                    <td style="text-align: right; width: 6%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.5%</font></td>
+                    <td style="text-align: center; width: 5%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.6%</font></td>
+                    <td style="text-align: center; width: 7%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.7%</font></td>
+                    <td style="text-align: center; width: 6%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.8%</font></td>
+                    <td style="width: 10%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.9%</font></td>
+                    <td style="text-align: right; width: 8%; border-bottom-style:solid; border-bottom-width:1px">					<font face="Arial" style="font-size: 9pt">%tp.10%</font></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+
+<p></p>
+
+
+
+<p></p>
+		
+<table style="color: rgb(39, 33, 151);"width="100%" cellspacing="0">
+
+
+  <tbody>
+
+    <tr>
+
+
+    <td bgcolor="#000000">
+    
+      
+      <p style="text-align: left;">
+    <font size="2" face="Arial">
+	<span style="color: #FFFFFF;font-weight:700; font-style:italic">&nbsp;Processo de Aprova&ccedil;&atilde;o</span></font></p>
+
+      </td>
+
+
+  </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<table style="width: 100%;" border="0" bordercolor="#ffffff" cellspacing="1" cellpadding="0">
+
+
+  <tbody>
+
+    <tr>
+
+
+    <td class="TableRowBlueDarkMini" style="color: rgb(255, 204, 0); background-color:#047EC7" align="center" width="6%">
+    <font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">N&iacute;vel</font></td>
+
+
+    <td style="color: rgb(255, 204, 0); background-color:#047EC7" class="TableRowBlueDarkMini" align="center" width="20%">
+    <font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Usu&aacute;rio</font></td>
+
+
+    <td style="color: rgb(255, 204, 0); background-color:#047EC7" class="TableRowBlueDarkMini" align="center" width="12%">
+    <font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Situação</font></td>
+
+
+    <td style="color: rgb(255, 204, 0); background-color:#047EC7" class="TableRowBlueDarkMini" align="center" width="14%">
+    <font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Aprovado / Reprovado por</font></td>
+
+
+    <td style="color: rgb(255, 204, 0); background-color:#047EC7" class="TableRowBlueDarkMini" align="center" width="6%">
+    <font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Data</font></td>
+
+
+    <td style="color: rgb(255, 204, 0); background-color:#047EC7" class="TableRowBlueDarkMini" align="center" width="28%">
+    <font face="Arial" color="#FFFFFF" style="font-size: 9pt; font-weight:700">Observa&ccedil;&otilde;es</font></td>
+
+
+  </tr>
+
+
+  
+  
+  </tbody><tbody>
+
+
+  <tr>
+
+
+    <td class="TableRowWhiteMini2" align="center" width="6%" style="border-bottom-style: solid; border-bottom-width: 1px" height="27">
+	<font face="Arial" style="font-size: 9pt">%t1.1%</font></td>
+
+
+    <td class="TableRowWhiteMini2" align="left" width="20%" style="border-bottom-style: solid; border-bottom-width: 1px" height="27">
+	<font face="Arial" style="font-size: 9pt">%t1.2%</font></td>
+
+
+    <td class="TableRowWhiteMini2" align="center" width="12%" style="border-bottom-style: solid; border-bottom-width: 1px" height="27">
+	<font face="Arial" style="font-size: 9pt">%t1.3%</font></td>
+
+
+    <td class="TableRowWhiteMini2" align="center" width="14%" style="border-bottom-style: solid; border-bottom-width: 1px" height="27">
+	<font face="Arial" style="font-size: 9pt">%t1.4%</font></td>
+
+
+    <td class="TableRowWhiteMini2" align="center" width="6%" style="border-bottom-style: solid; border-bottom-width: 1px" height="27">
+	<font face="Arial" style="font-size: 9pt">%t1.5%</font></td>
+
+
+    <td class="TableRowWhiteMini2" align="left" width="28%" style="border-bottom-style: solid; border-bottom-width: 1px" height="27">
+	<font face="Arial" style="font-size: 9pt">%t1.6%</font></td>
+
+
+  </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+&nbsp;
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+	<tbody>
+
+    <tr>
+
+      <td bgcolor="#022141">
+		<img src="../../../../LOGO.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+&nbsp;
+
+
+<div align="center">
+<table class="TableRowYellow" width="679">
+
+   <tr>
+       <td width="100%">
+           <table height="108" width="673" cellspacing="0" cellpadding="0">
+               <tr>
+                   <td width="673" height="14" class="TableColumnTitle" colspan="2" style="background-color: #000000">
+					<font color="#FFFFFF" size="3">&nbsp;Aprova ?</font></td>
+               </tr>
+               <tr>
+                   <td width="673" height="21" colspan="2" bgcolor="#C4E1FF"><font face="Tahoma" size="2"><input type="radio" checked name="OPC" value="%OPC%S">Sim.</font></td>
+               </tr>
+               <tr>
+                   <td width="148" height="37" valign="top" bgcolor="#C4E1FF"><font face="Tahoma" size="2">
+                       <input type="radio" name="OPC" value="%OPC%N">Não. (Favor 
+					especificar motivo)
+                   </font></td>
+                   <td width="525" height="37" bgcolor="#C4E1FF"><font face="Tahoma" size="1">
+                       <textarea name="OBS" rows="2" cols="50"
+                          >%OBS%</textarea>
+                    </font></td>
+               </tr>
+              <tr>
+                   <td width="673" height="30" colspan="2" bgcolor="#C4E1FF"><font face="Tahoma">
+							<input type="hidden" name="CHAVE" 		value="%CHAVE%">
+							<input type="hidden" name="CFILANT" 	value="%CFILANT%">
+							<input type="hidden" name="C7_FILENT" 	value="%C7_FILENT%">
+							<input type="hidden" name="WFID" 		value="%WFID%">
+                   
+       				   	<p align="center">
+                   
+						<input type="button" onClick="submit()" name="B1" value="Enviar" type="submit">
+       					<input name="B2" value="Limpar" type="reset">
+                    </font></td>
+              </tr>
+              
+           </table>
+       </td>
+   </tr>
+</form>
+
+	
+      </table>
+
+
+</div>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+	<tbody>
+
+    <tr>
+
+      <td bgcolor="#022141">
+		<img src="../../../../LOGO.gif" height="1" width="1"></td>
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+
+
+<table border="0" width="100%">
+
+
+  <tbody>
+
+    <tr>
+
+
+  <td class="Mini"></td>
+
+
+    </tr>
+
+
+    <tr>
+
+      <td class="Mini">Workflow TERRACOM</td>
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+
+
+</body>
+</html>
