@@ -1,13 +1,13 @@
 #INCLUDE "TOTVS.CH"
 #INCLUDE "RESTFUL.CH"
 
-WSRESTFUL sample DESCRIPTION "Exemplo de serviço REST"
+WSRESTFUL sample DESCRIPTION "Exemplo de serviço REST" //FORMAT APPLICATION_JSON
 
 WSDATA count      AS INTEGER
 WSDATA startIndex AS INTEGER
 
 WSMETHOD GET DESCRIPTION "Exemplo de retorno de entidade(s)" WSSYNTAX "/sample || /sample/{id}"
-WSMETHOD POST DESCRIPTION "Exemplo de inclusao de entidade" WSSYNTAX "/sample/{id}"
+WSMETHOD POST DESCRIPTION "Exemplo de inclusao de entidade" WSSYNTAX "/samplepost || /samplepost/{id}"
 WSMETHOD PUT DESCRIPTION "Exemplo de alteração de entidade" WSSYNTAX "/sample/{id}"
 WSMETHOD DELETE DESCRIPTION "Exemplo de exclusão de entidade" WSSYNTAX "/sample/{id}"
 
@@ -48,21 +48,27 @@ WSMETHOD GET WSRECEIVE startIndex, count WSSERVICE sample
 Return .T.
 
 // O metodo POST pode receber parametros por querystring, por exemplo:
-// WSMETHOD POST WSRECEIVE startIndex, count WSSERVICE sample
-WSMETHOD POST WSSERVICE sample
+WSMETHOD POST WSRECEIVE startIndex, count WSSERVICE sample
+//WSMETHOD POST WSSERVICE sample
 	Local lPost := .T.
 	Local cBody
+
+	VarInfo( '::aURLParms',::aURLParms,,.T.,.F. )
+
+	::SetContentType("application/json")
+	::SetResponse(FWJsonSerialize( {'Nome','Elton'},.T.,.F.))
+	VarInfo( 'Self',Self,,.F.,.T. )
 	// Exemplo de retorno de erro
-	If Len(::aURLParms) == 0
-		SetRestFault(400, "id parameter is mandatory")
-		lPost := .F.
-	Else
-		// recupera o body da requisição
-		cBody := ::GetContent()
-		// insira aqui o código para operação inserção
-		// exemplo de retorno de um objeto JSON
-		::SetResponse('{"id":' + ::aURLParms[1] + ', "name":"sample"}')
-	EndIf
+	//	If Len(::aURLParms) == 0
+	//		SetRestFault(400, "id parameter is mandatory")
+	//		lPost := .F.
+	//	Else
+	// recupera o body da requisição
+	//cBody := ::GetContent()
+	// insira aqui o código para operação inserção
+	// exemplo de retorno de um objeto JSON
+	//::SetResponse('{"id":' + ::aURLParms[1] + ', "name":"sample"}')
+	//	EndIf
 Return lPost
 
 // O metodo PUT pode receber parametros por querystring, por exemplo:

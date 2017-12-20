@@ -1,41 +1,67 @@
 #INCLUDE 'TOTVS.CH'
 
-User Function Semaforo( aParam )
+User Function Semaforo( /*aParam*/ )
 
-	Local nLenParam := Len( aParam )
-	local nX        := 0
+Local cRet := ''
 
-	VarInfo( '',aParam,,.F.,.T. )
+//VarInfo( 'Val( GetGlbValue( "Semaforo" ) )', Val( GetGlbValue( 'Semaforo' ) ),,.F.,.T. )
+//VarInfo( 'Val( GetGlbValue( "Semaforo" ) ) # 0', Val( GetGlbValue( 'Semaforo' ) ) # 0,,.F.,.T. )
 
-	RpcSetEnv( aParam[ nLenParam - 3 ], aParam[ nLenParam - 2 ] )
+If Val( GetGlbValue( 'Semaforo' ) ) == 0
 
-	If LockByName( ProcName() )
+	ConOut( ProcName() + ': Iniciada ' + Time() )
 
-		ConOut( 'Lock permitido: ' + aParam[ 1 ] )
-		ConOut( FwTimeStamp( 2 ) )
-		ConOut( Replicate( '-', 500 ) )
+	PutGlbValue ( 'Semaforo', '1' )
 
-		For nX := 1 To 500000000
+	Sleep( 1000 * 60 * 2 )
 
-		Next Nx
+	PutGlbValue ( 'Semaforo', '0' )
 
-		UnLockByName( ProcName() )
+	ConOut( ProcName() + ': Finalizada ' + Time() )
 
-	Else
+Else
 
-		ConOut( 'Lock não permitido: ' + aParam[ 1 ] )
-		ConOut( FwTimeStamp( 2 ) )
-		ConOut( Replicate( '-', 500 ) )
+		ConOut( ProcName() + ': Em Execução ' + Time() )
 
-	End If
+End If
 
-	RpcClearEnv()
+Return cRet
 
-	ConOut( FwTimeStamp( 2 ) )
 
-	cHoraInicio := TIME() // Armazena hora de inicio do processamento.. .
-	cElapsed := ElapTime( cHoraInicio, TIME() )  // Calcula a diferença de tempo
-
-	ConOut( cElapsed )
-
-Return
+//	Local nLenParam := Len( aParam )
+//	local nX        := 0
+//
+//	VarInfo( '',aParam,,.F.,.T. )
+//
+//	RpcSetEnv( aParam[ nLenParam - 3 ], aParam[ nLenParam - 2 ] )
+//
+//	If LockByName( ProcName() )
+//
+//		ConOut( 'Lock permitido: ' + aParam[ 1 ] )
+//		ConOut( FwTimeStamp( 2 ) )
+//		ConOut( Replicate( '-', 500 ) )
+//
+//		For nX := 1 To 500000000
+//
+//		Next Nx
+//
+//		UnLockByName( ProcName() )
+//
+//	Else
+//
+//		ConOut( 'Lock não permitido: ' + aParam[ 1 ] )
+//		ConOut( FwTimeStamp( 2 ) )
+//		ConOut( Replicate( '-', 500 ) )
+//
+//	End If
+//
+//	RpcClearEnv()
+//
+//	ConOut( FwTimeStamp( 2 ) )
+//
+//	cHoraInicio := TIME() // Armazena hora de inicio do processamento.. .
+//	cElapsed := ElapTime( cHoraInicio, TIME() )  // Calcula a diferença de tempo
+//
+//	ConOut( cElapsed )
+//
+//Return

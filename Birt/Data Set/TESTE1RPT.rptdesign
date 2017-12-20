@@ -1,29 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
-    <list-property name="propertyBindings">
-        <structure>
-            <property name="name">com_totvs_tds_birt_connection_service</property>
-            <property name="id">7</property>
-        </structure>
-        <structure>
-            <property name="name">OdaConnProfileName</property>
-            <property name="id">7</property>
-        </structure>
-        <structure>
-            <property name="name">OdaConnProfileStorePath</property>
-            <property name="id">7</property>
-        </structure>
-    </list-property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <data-sources>
-        <oda-data-source extensionID="com.totvs.tds.birt.oda.protheus" name="Data Source" id="7">
-            <property name="com_totvs_tds_birt_connection_service">com.totvs.tds.birt.connection.rpc</property>
+        <oda-data-source extensionID="com.totvs.tds.birt.oda.protheus" name="Data Source" id="8">
+            <property name="com_totvs_tds_birt_connection_service">br.com.totvs.tds.birt.connection.rpc</property>
         </oda-data-source>
     </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="com.totvs.tds.birt.oda.protheus.advpl" name="Data Set" id="44">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CAMPO1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Campo 1</text-property>
+                    <text-property name="heading">Campo 1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAMPO2</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Campo 2</text-property>
+                    <text-property name="heading">Campo 2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAMPO3</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Campo 3</text-property>
+                    <text-property name="heading">Campo 3</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAMPO4</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Campo 4</text-property>
+                    <text-property name="heading">Campo 4</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAMPO5</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Campo 5</text-property>
+                    <text-property name="heading">Campo 5</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CAMPO1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CAMPO2</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CAMPO3</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CAMPO4</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CAMPO5</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CAMPO1</property>
+                    <property name="nativeName">CAMPO1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CAMPO2</property>
+                    <property name="nativeName">CAMPO2</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CAMPO3</property>
+                    <property name="nativeName">CAMPO3</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CAMPO4</property>
+                    <property name="nativeName">CAMPO4</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">CAMPO5</property>
+                    <property name="nativeName">CAMPO5</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[teste01]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPO1</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Campo 1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Campo 1</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPO2</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Campo 2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Campo 2</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPO3</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Campo 3</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Campo 3</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPO4</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Campo 4</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Campo 4</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPO5</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Campo 5</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Campo 5</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
     <styles>
         <style name="report" id="4">
             <property name="fontFamily">sans-serif</property>
@@ -68,4 +276,115 @@
             </page-footer>
         </simple-master-page>
     </page-setup>
+    <body>
+        <table id="45">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CAMPO1</property>
+                    <text-property name="displayName">Campo 1</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CAMPO1"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CAMPO2</property>
+                    <text-property name="displayName">Campo 2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CAMPO2"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">CAMPO3</property>
+                    <text-property name="displayName">Campo 3</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CAMPO3"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CAMPO4</property>
+                    <text-property name="displayName">Campo 4</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CAMPO4"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CAMPO5</property>
+                    <text-property name="displayName">Campo 5</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CAMPO5"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="74"/>
+            <column id="75"/>
+            <column id="76"/>
+            <column id="77"/>
+            <column id="78"/>
+            <header>
+                <row id="46">
+                    <cell id="47">
+                        <label id="48">
+                            <text-property name="text">Campo 1</text-property>
+                        </label>
+                    </cell>
+                    <cell id="49">
+                        <label id="50">
+                            <text-property name="text">Campo 2</text-property>
+                        </label>
+                    </cell>
+                    <cell id="51">
+                        <label id="52">
+                            <text-property name="text">Campo 3</text-property>
+                        </label>
+                    </cell>
+                    <cell id="53">
+                        <label id="54">
+                            <property name="backgroundColor">red</property>
+                            <property name="color">gray</property>
+                            <text-property name="text">Campo 4</text-property>
+                        </label>
+                    </cell>
+                    <cell id="55">
+                        <label id="56">
+                            <text-property name="text">Campo 5</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="57">
+                    <cell id="58">
+                        <data id="59">
+                            <property name="resultSetColumn">CAMPO1</property>
+                        </data>
+                    </cell>
+                    <cell id="60">
+                        <data id="61">
+                            <property name="resultSetColumn">CAMPO2</property>
+                        </data>
+                    </cell>
+                    <cell id="62">
+                        <data id="63">
+                            <property name="resultSetColumn">CAMPO3</property>
+                        </data>
+                    </cell>
+                    <cell id="64">
+                        <data id="65">
+                            <property name="resultSetColumn">CAMPO4</property>
+                        </data>
+                    </cell>
+                    <cell id="66">
+                        <data id="67">
+                            <property name="resultSetColumn">CAMPO5</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="68">
+                    <cell id="69"/>
+                    <cell id="70"/>
+                    <cell id="71"/>
+                    <cell id="72"/>
+                    <cell id="73"/>
+                </row>
+            </footer>
+        </table>
+    </body>
 </report>

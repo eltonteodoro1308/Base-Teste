@@ -11,7 +11,7 @@ COLUMNS
 DEFINE COLUMN CAMPO1 TYPE CHARACTER SIZE 10 LABEL "Campo 1"
 DEFINE COLUMN CAMPO2 TYPE NUMERIC SIZE 6 DECIMALS 2 LABEL "Campo 2"
 DEFINE COLUMN CAMPO3 TYPE CHARACTER SIZE 10 LABEL "Campo 3"
-DEFINE COLUMN CAMPO4 TYPE CHARACTER SIZE 1 LABEL "Campo 4"
+DEFINE COLUMN CAMPO4 TYPE CHARACTER SIZE 10 LABEL "Campo 4"
 DEFINE COLUMN CAMPO5 TYPE CHARACTER SIZE 100 LABEL "Campo 5"
 
 DEFINE QUERY "SELECT * FROM %WTable:1%"
@@ -19,6 +19,7 @@ DEFINE QUERY "SELECT * FROM %WTable:1%"
 PROCESS DATASET
 
 Local cWTabAlias
+Local nX := 0
 
 //Private cField1 := self:execParamValue( "MV_PAR01" )
 //Private cField2 := self:execParamValue( "MV_PAR02" )
@@ -34,15 +35,22 @@ If self:isPreview()
 	//em atributos das tabelas utilizadas durante o processamento
 EndIf
 
-RecLock( cWTabAlias, .T. )
+For nX := 1 To 10
 
-( cWTabAlias )->CAMPO1 := 'cField1'
-( cWTabAlias )->CAMPO2 := 'cField2'
-( cWTabAlias )->CAMPO3 := 'DtoC(cField3)'
-( cWTabAlias )->CAMPO4 := 'cField4'
-( cWTabAlias )->CAMPO5 := 'cField5'
+	RecLock( cWTabAlias, .T. )
 
-( cWTabAlias )->( MsUnlock() )
+	( cWTabAlias )->CAMPO1 := 'cField1'
+	( cWTabAlias )->CAMPO2 := 123
+	( cWTabAlias )->CAMPO3 := 'cField3'
+	( cWTabAlias )->CAMPO4 := 'cField4'
+	( cWTabAlias )->CAMPO5 := 'cField5'
+
+	( cWTabAlias )->( MsUnlock() )
+
+	
+
+Next nX
 
 ( cWTabAlias )->( DbCloseArea() )
+
 Return .T.
