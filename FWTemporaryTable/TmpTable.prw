@@ -8,6 +8,7 @@ User Function TmpTable()
 	Local oTempTable := FWTemporaryTable():New( cAliasTmp )
 	Local aFields    := {}
 	Local nX         := 0
+	Local cTableName := ""
 
 	//	For nX := 1 To ( cAliasSx5 )->( FCount() )
 	//
@@ -52,9 +53,11 @@ User Function TmpTable()
 		( cAliasSx5 )->( DbSkip() )
 
 	End Do
+	
+	cTableName := oTempTable:GetRealName()
 
 	( cAliasSx5 )->( DbCloseArea() )
 
-	oTempTable:Delete()
+	//oTempTable:Delete()
 
 Return
