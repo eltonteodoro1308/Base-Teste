@@ -1,0 +1,7 @@
+#generate by TDS Version 11.3.9.201806061959
+#Mon Sep 24 09:31:17 BRT 2018
+parameter.exclusionList=*xfun*.*
+replay.version=11.3.9.201806061959
+parameter.tableList=
+parameter.inclusionList=mata*.*
+parameter.functionInclusionOptions=
