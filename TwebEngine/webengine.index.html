@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        body { font-family: 'Calibri'; }
+        a { text-decoration: none; }
+        div { display: inline-block; float: left; background-color: #019AC4; color: #FFFFFF;
+              width: 250px; height: 34px; margin: 10px; padding: 10px; }
+    </style>
+ 
+    <script src="totvstec.js"></script>
+    <script>
+        onload = function () { loadEngine(); }
+ 
+        function loadEngine() {
+            // Conecta WebSocket Server
+            totvstec.connectWS( function(){
+                // Carrega mensageria exclusiva da pagina
+                dialog.advplToJs.connect(function (codeType, codeContent) {
+                    if (codeType == "html") {
+                        var page = document.getElementById("main");
+                        page.innerHTML += codeContent;
+                    }
+                });
+ 
+                // Envia sinal informando termino da carga da pagina
+                dialog.jsToAdvpl("page_started", "Pagina inicializada");
+            });           
+        }
+ 
+        function getDate(){
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            return mm+'/'+dd+'/'+yyyy;
+        }
+         
+        function runAdvplSuccess(retStr){
+            alert("CallBack da função runADVPL: " + retStr);
+        }
+    </script>
+</head>
+ 
+<body>
+    <font face="calibri" color="#000000">
+    <p id="main">Totvs - Protheus - advpl</p>
+</body>
+</html>
