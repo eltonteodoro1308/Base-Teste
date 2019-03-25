@@ -1,4 +1,4 @@
-#include 'totvs.ch'
+#include 'Totvs.ch'
 
 user function TstJson()
 
