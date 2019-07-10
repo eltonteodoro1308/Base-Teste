@@ -6,7 +6,7 @@ User Function MT010INC()
 
 	//Crio o objeto oProcess, que recebe a inicialização da classe TWFProcess. Repare que o primeiro Parâmetro é o código do processo que cadastramos acima e o segundo uma descrição qualquer.
 
-	oProcess := TWFProcess():New( "PRECOS", "Atualizacao de Precos" )
+	Local oProcess := TWFProcess():New( "000002", "Atualizacao de Precos" )
 
 	//Crio uma task. Um Processo pode ter várias Tasks(tarefas). Para cada Task informo um nome para ela e o HTML envolvido. Repare que o path do HTML é sempre abaixo do RootPath do Microsiga Protheus®.
 
@@ -64,7 +64,7 @@ User Function MT010INC()
 
 	//Inicio o Processo, enviando o e-mail.
 
-	oProcess:Start()
+	oProcess:Start('\web\')
 
 Return .T.
 
